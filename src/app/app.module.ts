@@ -21,6 +21,7 @@ import { HeaderChannelComponent } from './components/header-channel/header-chann
 import { DetailVideoComponent } from './components/detail-video/detail-video.component';
 import * as http from "http";
 import {HttpClientModule} from "@angular/common/http";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
