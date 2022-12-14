@@ -5,6 +5,7 @@
   <div class="router">
 <router-outlet> </router-outlet>
 
-    <iframe *ngFor="let video of videos" [src]="video.url"></iframe>
+    <img *ngFor="let video of videos" [src]="base_url + video.thumbnail__target_id" >
+
 </div>
 </div>

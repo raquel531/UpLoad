@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppComponent, SafePipe} from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { VideopageComponent } from './pages/videopage/videopage.component';
 import { ThematicsComponent } from './pages/thematics/thematics.component';
@@ -40,7 +40,8 @@ import {HttpClientModule} from "@angular/common/http";
     RecChannelsComponent,
     CommentsComponent,
     HeaderChannelComponent,
-    DetailVideoComponent
+    DetailVideoComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

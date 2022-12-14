@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-const BASE_URL = 'https://project-grupo04.ddev.site'
+const BASE_URL = 'https://dev-project-upskill-grupo04.pantheonsite.io'
+
 
 @Injectable({
   providedIn: 'root'

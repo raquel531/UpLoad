@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {ServiceService} from "./service/service.service";
+import { Pipe, PipeTransform} from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
+
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
+  transform(url: string) {
+    console.log(url)
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 
 @Component({
   selector: 'app-root',
@@ -10,7 +20,8 @@ import {ServiceService} from "./service/service.service";
 export class AppComponent {
   title = 'upload04';
 
-  videos: any = []
+  videos: any = [];
+  base_url= 'https://project-upskill-grupo04.ddev.site'
 
   constructor(private Service: ServiceService) {}
 
