@@ -1,1 +1,36 @@
-<p>detail-video works!</p>
+<div class="detail" *ngIf="videos[46]">
+  <div class="title">
+    <p>{{videos[46].name}}</p>
+    <div class="tags_flag">
+      <div class="tags">
+        <a>#{{videos[46].field_tags}}</a>
+          </div>
+          <div class="flag">
+        <fa-icon class="fa-spin" [icon]="faFlag"></fa-icon>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="thumbnail">
+    <img [src]="url + videos[46].thumbnail__target_id" alt="video">
+  </div>
+  <div class="user_likes">
+    <div class="img_info">
+    <img class="userpic" [src]="pic" alt="user">
+     <div class="info">
+        <p class="channel">{{videos[46].field_channel_1}}</p>
+        <p class="timeAgo">{{videos[46].created}}</p>
+      </div>
+    </div>
+
+    <div class="likes">
+      <fa-icon [icon]="faThumbsUp"></fa-icon>
+      <span> | </span>
+      <fa-icon [icon]="faThumbsDown"></fa-icon>
+    </div>
+  </div>
+  <div class="description">
+    <p>{{videos[46].field_description}}</p>
+  </div>
+</div>
+

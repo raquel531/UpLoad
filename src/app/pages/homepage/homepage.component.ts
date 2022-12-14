@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  videos: any = []
+
+  constructor(private Service: ServiceService) {}
 
   ngOnInit(): void {
+    this.Service.getvideos().subscribe((videos) => {
+      this.videos = <any[]>videos;
+    })
   }
 
 }

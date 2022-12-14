@@ -1,11 +1,15 @@
 <div class="container">
   <div class="logo">
-  <img src="assets/uploadlogo.png">
+  <img src="assets/logo/uploadlogo.png">
   </div>
   <ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">News</a></li>
-    <li><a href="">Contact</a></li>
-    <li><a href="">About</a></li>
+    <li><fa-icon [icon]="faHome"></fa-icon><a href="">Home</a></li>
+    <li><fa-icon [icon]="faChannels"></fa-icon><a href="">Channels</a></li>
+    <li><fa-icon [icon]="faThemedArticles"></fa-icon><a href="">Themed Articles</a></li>
+    <li><fa-icon [icon]="faPlaylists"></fa-icon><a href="">Playlists</a></li>
   </ul>
+
+  <div class="tags">
+    <p>TAGS</p>
+  </div>
 </div>

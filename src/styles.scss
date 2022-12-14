@@ -1,5 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
-body{
+@import 'assets/scss/modules/fonts';
+
+$primary_font: 'nominee-regular';
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+
+* {
   box-sizing: border-box;
-  margin:0px;
+}
+body{
+  font-family: $primary_font;
+  font-weight: $regular;
+  margin: 0;
+  height: 100%;
+
 }
