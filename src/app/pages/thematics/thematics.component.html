@@ -1,1 +1,6 @@
-<p>thematics works!</p>
+<p style="font-size: 50px; text-align: center" >ALL THE THEMATICS</p>
+<div class="lecoisas" *ngFor="let theme of thematics">
+  <h5 style="color: #1e76fe">{{theme.title}}</h5>
+  <img [src]="baseURLMEDIA + theme.field_header">
+  <h5>fazer 3 img preview de videos do canal thumbails </h5>
+</div>

@@ -3,13 +3,22 @@
   <img src="assets/logo/uploadlogo.png">
   </div>
   <ul>
-    <li><fa-icon [icon]="faHome"></fa-icon><a href="">Home</a></li>
-    <li><fa-icon [icon]="faChannels"></fa-icon><a href="">Channels</a></li>
-    <li><fa-icon [icon]="faThemedArticles"></fa-icon><a href="">Themed Articles</a></li>
-    <li><fa-icon [icon]="faPlaylists"></fa-icon><a href="">Playlists</a></li>
+    <a routerLink="home" routerLinkActive="active">
+    <li><fa-icon [icon]="faHome"></fa-icon>Home</li>
+    </a>
+    <a routerLink="channels" routerLinkActive="active">
+    <li><fa-icon [icon]="faChannels"></fa-icon>Channels</li>
+    </a>
+    <a routerLink="thematics" routerLinkActive="active">
+    <li><fa-icon [icon]="faThemedArticles"></fa-icon>Themed Articles</li>
+    </a>
+    <a routerLink="playlists" routerLinkActive="active">
+    <li><fa-icon [icon]="faPlaylists"></fa-icon>Playlists</li>
+    </a>
   </ul>
 
   <div class="tags">
     <p>TAGS</p>
+    <p *ngFor="let tag of tags" >{{tag.name}}</p>
   </div>
 </div>

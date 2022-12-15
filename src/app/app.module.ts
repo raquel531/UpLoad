@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import {AppComponent, SafePipe} from './app.component';
+import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { VideopageComponent } from './pages/videopage/videopage.component';
 import { ThematicsComponent } from './pages/thematics/thematics.component';
@@ -22,28 +22,29 @@ import { DetailVideoComponent } from './components/detail-video/detail-video.com
 import * as http from "http";
 import {HttpClientModule} from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {SafePipe} from "./service/service.service";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomepageComponent,
-    VideopageComponent,
-    ThematicsComponent,
-    ThematicpageComponent,
-    ChannelsComponent,
-    ChannelpageComponent,
-    PlaylistsComponent,
-    PlaylistpageComponent,
-    HeaderComponent,
-    VideoComponent,
-    NavbarComponent,
-    RecArticleComponent,
-    RecChannelsComponent,
-    CommentsComponent,
-    HeaderChannelComponent,
-    DetailVideoComponent,
-    SafePipe,
-  ],
+    declarations: [
+        AppComponent,
+        HomepageComponent,
+        VideopageComponent,
+        ThematicsComponent,
+        ThematicpageComponent,
+        ChannelsComponent,
+        ChannelpageComponent,
+        PlaylistsComponent,
+        PlaylistpageComponent,
+        HeaderComponent,
+        VideoComponent,
+        NavbarComponent,
+        RecArticleComponent,
+        RecChannelsComponent,
+        CommentsComponent,
+        HeaderChannelComponent,
+        DetailVideoComponent,
+        SafePipe
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
