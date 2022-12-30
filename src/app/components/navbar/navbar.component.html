@@ -1,6 +1,6 @@
 <div class="container">
   <div class="logo">
-  <img src="assets/logo/uploadlogo.png">
+  <img src="assets/logo/uploadlogo.png" alt="uplog">
   </div>
   <ul>
     <a routerLink="home" routerLinkActive="active">
@@ -19,6 +19,6 @@
 
   <div class="tags">
     <p>TAGS</p>
-    <p *ngFor="let tag of tags" >{{tag.name}}</p>
+    <app-tag  *ngFor="let tag of tags" [tags]="tag.name"></app-tag>
   </div>
 </div>

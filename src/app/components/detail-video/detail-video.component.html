@@ -1,9 +1,9 @@
-<div class="detail" *ngIf="videos[46]">
+<div class="detail">
   <div class="title">
-    <p>{{videos[46].name}}</p>
+    <p>{{videos.name}}</p>
     <div class="tags_flag">
       <div class="tags">
-        <a>#{{videos[46].field_tags}}</a>
+        <a>#{{videos.tags}}</a>
           </div>
           <div class="flag">
         <fa-icon class="fa-spin" [icon]="faFlag"></fa-icon>
@@ -12,14 +12,14 @@
   </div>
   <router-outlet></router-outlet>
   <div class="thumbnail">
-    <img [src]="url + videos[46].thumbnail__target_id" alt="video">
+    <iframe [src]=" videos.url | safe" allowfullscreen></iframe>
   </div>
   <div class="user_likes">
     <div class="img_info">
-    <img class="userpic" [src]="pic" alt="user">
+    <img class="userpic" [src]="url + videos.picture" alt="user">
      <div class="info">
-        <p class="channel">{{videos[46].field_channel_1}}</p>
-        <p class="timeAgo">{{videos[46].created}}</p>
+        <p class="channel">{{videos.field_channel_1}}</p>
+        <p class="timeAgo">{{videos.created}}</p>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="description">
-    <p>{{videos[46].field_description}}</p>
+    <p>{{videos.description}}</p>
   </div>
 </div>
 

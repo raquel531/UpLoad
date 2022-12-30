@@ -19,10 +19,10 @@ import { RecChannelsComponent } from './components/rec-channels/rec-channels.com
 import { CommentsComponent } from './components/comments/comments.component';
 import { HeaderChannelComponent } from './components/header-channel/header-channel.component';
 import { DetailVideoComponent } from './components/detail-video/detail-video.component';
-import * as http from "http";
 import {HttpClientModule} from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {SafePipe} from "./service/service.service";
+import { TagComponent } from './components/tag/tag.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +43,8 @@ import {SafePipe} from "./service/service.service";
         CommentsComponent,
         HeaderChannelComponent,
         DetailVideoComponent,
-        SafePipe
+        SafePipe,
+        TagComponent
     ],
   imports: [
     BrowserModule,

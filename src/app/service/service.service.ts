@@ -20,7 +20,7 @@ export class SafePipe implements PipeTransform {
 
 }
 
-const BASE_URL = 'https://dev-project-upskill-grupo04.pantheonsite.io/api'
+const BASE_URL = 'https://project-upskill-grupo04.ddev.site/api'
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,10 @@ const BASE_URL = 'https://dev-project-upskill-grupo04.pantheonsite.io/api'
 export class ServiceService {
 
   constructor(private http: HttpClient) { }
+
+  getvideoDetail(id_video: number) {
+    return this.http.get(BASE_URL + "/videos/" + id_video);
+  }
 
   getvideos() {
     return this.http.get(BASE_URL + "/videos");
@@ -54,8 +58,8 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/taxonomy/videos" )
   }
 
-  getvideoschannel(channel_id : number) {
-    return this.http.get(BASE_URL + "/channel/videos" + channel_id )
+  getvideoschannel(id_channel : number) {
+    return this.http.get(BASE_URL + "/channel/videos/" + id_channel )
   }
 
 }

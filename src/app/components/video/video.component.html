@@ -1,1 +1,8 @@
-<p>video works!</p>
+<div class="video_box" *ngFor="let video of videoschannel; let index = index " >
+  <div class="ctree" *ngIf="index<3">
+  <iframe [src]="video.url | safe"></iframe>
+  <h5> #{{video.tags}}</h5>
+  <h2>{{video.title}}</h2>
+<!--  <h6>{{time_ago}}</h6>-->
+  </div>
+</div>

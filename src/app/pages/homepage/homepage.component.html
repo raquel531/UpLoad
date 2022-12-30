@@ -1,4 +1,4 @@
-<div class="videos">
+<div class="videos" >
 <!--  <iframe *ngFor="let video of videos" [src]="video.field_media_oembed_video | safe"></iframe>-->
-  <img *ngFor="let video of videos" [src]="baseURL + video.thumbnail__target_id">
+  <img *ngFor="let video of videos" [src]="baseURL + video.thumbnail" [routerLink]="['/video', video.id_video]" alt="thumbnails">
 </div>
