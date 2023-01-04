@@ -1,6 +1,5 @@
 import {Injectable, Pipe, PipeTransform} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import { Pipe, PipeTransform } from '@angular/core';
 
 import { DomSanitizer } from "@angular/platform-browser";
 
