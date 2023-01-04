@@ -3,6 +3,7 @@ import {ServiceService} from "../../service/service.service";
 import {faThumbsUp, faThumbsDown} from "@fortawesome/free-regular-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {faFlag} from "@fortawesome/free-solid-svg-icons";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-detail-video',
@@ -11,24 +12,26 @@ import {faFlag} from "@fortawesome/free-solid-svg-icons";
 })
 export class DetailVideoComponent implements OnInit {
 
-  url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
-
   videos: any = []
+  url= 'https://project-upskill-grupo04.ddev.site'
 
   faFlag = faFlag as IconProp
   faThumbsUp = faThumbsUp as IconProp
   faThumbsDown = faThumbsDown as IconProp
 
-  pic = "../../../assets/r_r.jpg"
 
-  constructor(private Service: ServiceService) {}
+  constructor(private route: ActivatedRoute, private Service: ServiceService) {}
 
   ngOnInit(): void {
-    this.Service.getvideos().subscribe((videos) => {
-      this.videos = <any[]>videos;
+    let id_video = this.route.snapshot.params['id_video']
+    this.Service.getvideoDetail(id_video).subscribe((videos) => {
+      this.videos = videos;
+      this.videos = this.videos[0]
+       return this.videos.url = this.videos.url.replace("watch?v=", "embed/")
     })
 
   }
+
 }
 
 

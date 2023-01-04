@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ServiceService} from "../../service/service.service";
+
 
 @Component({
   selector: 'app-homepage',
@@ -9,6 +10,8 @@ import {ServiceService} from "../../service/service.service";
 export class HomepageComponent implements OnInit {
 
   videos: any = []
+  url= 'https://project-upskill-grupo04.ddev.site'
+  @Input() id_video!: number
 
   constructor(private Service: ServiceService) {}
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-channelpage',
@@ -10,6 +11,7 @@ export class ChannelpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

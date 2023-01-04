@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faHome, faPlay, faFilm, faBarsStaggered} from "@fortawesome/free-solid-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {ServiceService} from "../../service/service.service";
 
 
 @Component({
@@ -15,9 +16,14 @@ export class NavbarComponent implements OnInit {
   faThemedArticles = faFilm
   faPlaylists = faPlay
 
-  constructor() { }
+  tags : any = []
+
+  constructor(private Service: ServiceService) { }
 
   ngOnInit(): void {
+    this.Service.gettags().subscribe((tags) => {
+      this.tags = <any[]>tags;
+    })
   }
 
 }

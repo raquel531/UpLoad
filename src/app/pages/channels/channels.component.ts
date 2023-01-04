@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-channels',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChannelsComponent implements OnInit {
 
-  constructor() { }
+  channels : any = []
+
+
+  constructor(private Service: ServiceService) {}
+
 
   ngOnInit(): void {
+    this.Service.getchannels().subscribe((channels) => {
+      this.channels = <any[]>channels;
+    })
+
   }
 
 }

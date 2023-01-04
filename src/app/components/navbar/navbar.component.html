@@ -1,15 +1,24 @@
 <div class="container">
   <div class="logo">
-  <img src="assets/logo/uploadlogo.png">
+  <img src="assets/logo/uploadlogo.png" alt="uplog">
   </div>
   <ul>
-    <li><fa-icon [icon]="faHome"></fa-icon><a href="">Home</a></li>
-    <li><fa-icon [icon]="faChannels"></fa-icon><a href="">Channels</a></li>
-    <li><fa-icon [icon]="faThemedArticles"></fa-icon><a href="">Themed Articles</a></li>
-    <li><fa-icon [icon]="faPlaylists"></fa-icon><a href="">Playlists</a></li>
+    <a routerLink="home" routerLinkActive="active">
+    <li><fa-icon [icon]="faHome"></fa-icon>Home</li>
+    </a>
+    <a routerLink="channels" routerLinkActive="active">
+    <li><fa-icon [icon]="faChannels"></fa-icon>Channels</li>
+    </a>
+    <a routerLink="thematics" routerLinkActive="active">
+    <li><fa-icon [icon]="faThemedArticles"></fa-icon>Themed Articles</li>
+    </a>
+    <a routerLink="playlists" routerLinkActive="active">
+    <li><fa-icon [icon]="faPlaylists"></fa-icon>Playlists</li>
+    </a>
   </ul>
 
   <div class="tags">
     <p>TAGS</p>
+    <app-tag  *ngFor="let tag of tags" [tags]="tag.name"></app-tag>
   </div>
 </div>

@@ -1,2 +1,16 @@
 <div class="videos">
-  <iframe *ngFor="let video of videos" [src]="video.url"></iframe>
+  <app-video *ngFor="let video of videos"
+  [thumbnail]="url + video.thumbnail__target_id"
+  [user_pic]="url + video.field_picture"
+  [channel]="video.field_channel_1"
+  [title]="video.name"
+  [time_ago]="video.created">
+
+  </app-video>
+</div>
+
+
+<!--  <iframe *ngFor="let video-channel of videos" [src]="video-channel.field_media_oembed_video | safe"></iframe>
+  <img *ngFor="let video of videos" [src]="baseURL + video.thumbnail__target_id" [routerLink]="['/video', video.id_video]" alt="thumbnails">
+</div>
+-->
