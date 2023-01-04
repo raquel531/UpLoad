@@ -1,0 +1,37 @@
+.videobox {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6%;
+  background-color: #1c1c24;
+}
+.videobox, .box1, .box2 {
+  max-width: 350px;
+}
+.thumbnail {
+  width: 350px;
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+}
+.user_icons {
+  position: relative;
+}
+.user_pic {
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -32px;
+  left: 245px;
+  border-style: solid;
+}
+
+.channel {
+  font-size: 10px;
+  color: #1e76fe;
+  font-weight: 100;
+}
+
+.timeago {
+  font-family: system-ui;
+  font-size: 10px;
+  color: #92929d;
+}
