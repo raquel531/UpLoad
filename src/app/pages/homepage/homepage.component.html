@@ -1,7 +1,7 @@
 <div class="videos">
   <app-video *ngFor="let video of videos"
-  [thumbnail]="url + video.thumbnail__target_id"
-  [user_pic]="url + video.field_picture"
+  [thumbnail]="url + video.thumbnail"
+  [user_pic]="url + video.picture"
   [channel]="video.field_channel_1"
   [title]="video.name"
   [time_ago]="video.created">

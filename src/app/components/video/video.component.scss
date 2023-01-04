@@ -3,6 +3,8 @@
   flex-direction: column;
   border-radius: 6%;
   background-color: #1c1c24;
+  height: 374px;
+  justify-content: space-between;
 
 }
 .videobox, .box1, .box2 {
@@ -17,17 +19,25 @@
 .user_icons {
   position: relative;
 }
+
 .user_pic {
   width: 66px;
+  height: 66px;
   border-radius: 50%;
   position: absolute;
+  border-style: solid;
   bottom: -17px;
   left: 266px;
-  border-style: solid;
+
 }
 
+
 .box2 {
-  margin: 8px 16px 12px;
+  margin: 8px 16px 16px;
+  height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .channel {
