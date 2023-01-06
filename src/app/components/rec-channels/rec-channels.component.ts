@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-rec-channels',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecChannelsComponent implements OnInit {
 
-  constructor() { }
+  channels: any = []
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
+  @Input() id_channel!: number
+
+  isShowMore = true
+
+  showMore() {
+    this.isShowMore = !this.isShowMore
+  }
+
+  constructor(private Service: ServiceService) {}
 
   ngOnInit(): void {
+    this.Service.getchannels().subscribe((channels) => {
+      this.channels = <any[]>channels;
+    })
   }
 
 }

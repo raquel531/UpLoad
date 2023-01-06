@@ -1,10 +1,16 @@
+.container {
+  display: flex;
+}
 app-video {
   margin-top: 15px;
+  margin-left: 16px;
 }
 .videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  max-width: 806px;
+
 }
 
 

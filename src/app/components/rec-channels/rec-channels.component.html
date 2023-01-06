@@ -1,1 +1,14 @@
-<p>rec-channels works!</p>
+<div class="rec_channels">
+  <div class="title">
+    <p>Recommended Channels</p>
+  </div>
+  <div class="channels" [ngClass]="{'limitHeight': isShowMore}">
+  <div class="list" *ngFor="let c of channels" [routerLink]="['/channel', c.id_channel]">
+    <img src="{{url + c.pic}}">
+    {{c.title}}
+  </div>
+</div>
+  <div class="show_more" >
+    <a (click)="showMore()">{{ isShowMore ? 'Show More': 'Show Less' }}</a>
+  </div>
+</div>
