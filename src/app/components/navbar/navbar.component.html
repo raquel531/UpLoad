@@ -16,9 +16,8 @@
     <li><fa-icon [icon]="faPlaylists"></fa-icon>Playlists</li>
     </a>
   </ul>
-
+  <p>TAGS</p>
   <div class="tags">
-    <p>TAGS</p>
     <app-tag  *ngFor="let tag of tags" [tags]="tag.name"></app-tag>
   </div>
 </div>
