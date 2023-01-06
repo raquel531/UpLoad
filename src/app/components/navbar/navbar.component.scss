@@ -3,15 +3,16 @@
   flex-direction: column;
   color: #b5b5be;
   width: 222px;
-
-  a {
+  .menu {
+    padding-bottom: 10px;
     color: #b5b5be;
     text-decoration-line: none;
     font-size: 10px;
-    margin-left: 20px;
 
     &.active, &:hover {
       color: white;
+      border-left: solid white;
+
     }
   }
 }
@@ -22,20 +23,28 @@ img {
 
 .logo {
   border-bottom: 2px solid #2b2b34;
+  margin-bottom: 15px;
 }
+
+fa-icon {
+  font-size: 15px;
+  margin-right: 14px;
+}
+
 ul {
   display: flex;
   list-style-type: none;
   margin-block-start: 0;
-  padding-inline-start: 13px;
+  padding-inline-start: 0;
   flex-direction: column;
+
 }
 li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 19px;
-  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 22px;
 }
 
 p, .tags{
@@ -56,3 +65,24 @@ app-tag {
   border-radius: 13%;
 }
 
+.limitHeight {
+  height: 222px;
+  overflow: hidden;
+}
+
+.more_tags {
+  display:flex;
+  justify-content: center;
+  width: 80px;
+  padding: 10px;
+  margin-left: 31%;
+  margin-top: 15px;
+  color: #b5b5be;
+  font-size: 10px;
+  background-color: #282830;
+  border-radius: 5px;
+
+  &.active, &:hover {
+    color: white;
+  }
+}

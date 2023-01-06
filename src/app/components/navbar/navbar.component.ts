@@ -18,6 +18,12 @@ export class NavbarComponent implements OnInit {
 
   tags : any = []
 
+  isMoreTags = true
+
+  moreTags() {
+    this.isMoreTags = !this.isMoreTags
+  }
+
   constructor(private Service: ServiceService) { }
 
   ngOnInit(): void {
