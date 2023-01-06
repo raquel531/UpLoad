@@ -13,7 +13,7 @@ import {ActivatedRoute} from "@angular/router";
 export class DetailVideoComponent implements OnInit {
 
   videos: any = []
-  url= 'https://project-upskill-grupo04.ddev.site'
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
   faFlag = faFlag as IconProp
   faThumbsUp = faThumbsUp as IconProp
@@ -27,7 +27,9 @@ export class DetailVideoComponent implements OnInit {
     this.Service.getvideoDetail(id_video).subscribe((videos) => {
       this.videos = videos;
       this.videos = this.videos[0]
+      console.log(videos)
        return this.videos.url = this.videos.url.replace("watch?v=", "embed/")
+
     })
 
   }

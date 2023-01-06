@@ -10,7 +10,7 @@ import {ServiceService} from "../../service/service.service";
 export class HomepageComponent implements OnInit {
 
   videos: any = []
-  url= 'https://project-upskill-grupo04.ddev.site'
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
   @Input() id_video!: number
 
   constructor(private Service: ServiceService) {}

@@ -8,16 +8,8 @@ import {ServiceService} from "../../service/service.service";
 })
 export class VideoChannelComponent implements OnInit {
 
-  // @Input() thumbnail = '';
-  // @Input() user_pic = '';
-  // @Input() channel = '';
-  @Input() title = '';
-  @Input() time_ago = '';
-  @Input() url = '';
-  @Input() tags = '';
   @Input() id_channel!: number
   videoschannel : any = []
-
 
 
   constructor(private Service: ServiceService) {
@@ -27,6 +19,10 @@ export class VideoChannelComponent implements OnInit {
     this.Service.getvideoschannel(this.id_channel).subscribe((videoschannels) => {
       this.videoschannel = videoschannels;
     })
+  }
+
+  embed(video: string) {
+    return video.replace("watch?v=", "embed/")
   }
 
 }

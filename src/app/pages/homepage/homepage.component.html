@@ -1,5 +1,5 @@
-<div class="videos">
-  <app-video *ngFor="let video of videos"
+<div class="videos" >
+  <app-video *ngFor="let video of videos" [routerLink]="['/video', video.id_video]"
   [thumbnail]="url + video.thumbnail"
   [user_pic]="url + video.picture"
   [channel]="video.field_channel_1"

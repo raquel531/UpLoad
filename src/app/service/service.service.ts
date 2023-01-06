@@ -19,7 +19,7 @@ export class SafePipe implements PipeTransform {
 
 }
 
-const BASE_URL = 'https://project-upskill-grupo04.ddev.site/api'
+const BASE_URL = 'https://dev-project-upskill-grupo04.pantheonsite.io/api'
 
 @Injectable({
   providedIn: 'root'
