@@ -4,7 +4,7 @@
   </div>
   <div class="channels" [ngClass]="{'limitHeight': isShowMore}">
   <div class="list" *ngFor="let c of channels" [routerLink]="['/channel', c.id_channel]">
-    <img src="{{url + c.pic}}">
+    <img src="{{url + c.pic}}" alt="user">
     {{c.title}}
   </div>
 </div>
