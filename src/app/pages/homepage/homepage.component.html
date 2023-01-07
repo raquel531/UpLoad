@@ -8,10 +8,9 @@
   [time_ago]="video.created">
   </app-video>
 </div>
-<app-rec-channels></app-rec-channels>
+  <div class="sidebar">
+  <app-rec-channels></app-rec-channels>
+  <app-rec-article></app-rec-article>
+  </div>
 </div>
 
-<!--  <iframe *ngFor="let video-channel of videos" [src]="video-channel.field_media_oembed_video | safe"></iframe>
-  <img *ngFor="let video of videos" [src]="baseURL + video.thumbnail__target_id" [routerLink]="['/video', video.id_video]" alt="thumbnails">
-</div>
--->

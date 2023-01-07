@@ -1,1 +1,18 @@
-<p>rec-article works!</p>
+<div class="rec-article">
+  <div class="title_more">
+    <div class="title">
+      <h4>Recommended Themathics</h4>
+    </div>
+    <div class="see_all" [routerLink]="['/thematics']">
+      <a>See All</a>
+    </div>
+  </div>
+  <div class="info">
+    <img src="{{url + thematics[0].field_picture}}" alt="pic">
+    <div class="text">
+    <h4 class="article_name">{{thematics[0].title}}</h4>
+    <h5 class="user_name">{{thematics[0].uid}}</h5>
+    </div>
+  </div>
+  <img class="thematic_pic" alt="pic" src="{{url + thematics[0].field_pic}}">
+</div>

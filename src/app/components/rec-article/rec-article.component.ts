@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-rec-article',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecArticleComponent implements OnInit {
 
-  constructor() { }
+  thematics: any = []
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
+
+  constructor(private Service: ServiceService) { }
 
   ngOnInit(): void {
+    this.Service.getthematics().subscribe((thematics) => {
+      this.thematics = <any[]>thematics;
+    })
   }
 
 }
