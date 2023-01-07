@@ -53,8 +53,8 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/thematics")
   }
 
-  getvideostag() {
-    return this.http.get(BASE_URL + "/taxonomy/videos" )
+  getvideostag(id_tag : number) {
+    return this.http.get(BASE_URL + "/tag/videos/" + id_tag )
   }
 
   getvideoschannel(id_channel : number) {

@@ -20,7 +20,7 @@
   <p>TAGS</p>
   </div>
   <div class="tags" [ngClass]="{'limitHeight': isMoreTags}">
-    <app-tag  *ngFor="let tag of tags" [tags]="tag.name"></app-tag>
+    <app-tag  *ngFor="let tag of tags" [tags]="tag.name" [id_tag]="tag.id_tag"></app-tag>
   </div>
   <div class="more_tags" >
     <a (click)="moreTags()">{{ isMoreTags ? 'More Tags': 'Less Tags' }}</a>

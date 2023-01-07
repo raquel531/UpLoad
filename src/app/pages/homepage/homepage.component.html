@@ -1,8 +1,8 @@
 <div class="container">
 <div class="videos" >
   <app-video *ngFor="let video of videos" [routerLink]="['/video', video.id_video]"
-  [thumbnail]="url + video.thumbnail"
-  [user_pic]="url + video.picture"
+  [thumbnail]="video.thumbnail"
+  [user_pic]="video.picture "
   [channel]="video.field_channel_1"
   [title]="video.name"
   [time_ago]="video.created">

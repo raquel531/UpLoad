@@ -9,7 +9,7 @@ import {ServiceService} from "../../service/service.service";
 export class ChannelsComponent implements OnInit {
 
   channels : any = []
-
+  url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
   constructor(private Service: ServiceService) {}
 

@@ -1,7 +1,7 @@
 <p style="font-size: 50px; text-align: center" >ALL THE CHANNELS</p>
 <div class="lecoisas" *ngFor="let channel of channels" >
+  <img src="{{url + channel.picture}}" alt="laFoto">
 <h5 style="color: #1e76fe">{{channel.title}}</h5>
 <app-video-channel [id_channel]="channel.id_channel"
 ></app-video-channel>
-
 </div>

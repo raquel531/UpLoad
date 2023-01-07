@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {SafePipe} from "./service/service.service";
 import { TagComponent } from './components/tag/tag.component';
 import { VideoComponent } from './components/video/video.component';
+import { TagvideosComponent } from './pages/tagvideos/tagvideos.component';
 
 @NgModule({
     declarations: [
@@ -46,7 +47,8 @@ import { VideoComponent } from './components/video/video.component';
         DetailVideoComponent,
         SafePipe,
         TagComponent,
-        VideoComponent
+        VideoComponent,
+        TagvideosComponent
     ],
   imports: [
     BrowserModule,
