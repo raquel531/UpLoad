@@ -1,0 +1,20 @@
+@import './assets/scss/modules/fonts';
+
+$primary_font: 'Poppins';
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family: $primary_font;
+  margin: 0;
+  height: 100%;
+
+}
