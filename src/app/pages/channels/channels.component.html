@@ -1,7 +1,21 @@
-<p style="font-size: 50px; text-align: center" >ALL THE CHANNELS</p>
-<div class="lecoisas" *ngFor="let channel of channels" >
-  <img src="{{url + channel.picture}}" alt="laFoto">
-<h5 style="color: #1e76fe">{{channel.title}}</h5>
-<app-video-channel [id_channel]="channel.id_channel"
-></app-video-channel>
+<div class="container">
+  <div class="page_title">
+  <p>ALL THE CHANNELS</p>
+  </div>
+  <div class="channel_box" *ngFor="let channel of channels" >
+    <div class="header">
+      <img src="{{url + channel.field_header}}" alt="header">
+      <div class="user_info">
+    <div class="user_pic">
+      <img src="{{url + channel.picture}}" alt="laFoto">
+    </div>
+    <div class="channel_info">
+      <h5 >{{channel.title}}</h5>
+    </div>
+      </div>
+    </div>
+    <div class="videos">
+       <app-video-channel [id_channel]="channel.id_channel"></app-video-channel>
+    </div>
+  </div>
 </div>
