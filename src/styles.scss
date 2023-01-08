@@ -1,6 +1,6 @@
-@import 'assets/scss/modules/fonts';
+@import './assets/scss/modules/fonts';
 
-$primary_font: 'nominee-regular';
+$primary_font: 'Poppins';
 
 // font-weight
 $thin:100;
@@ -14,7 +14,6 @@ $black:900;
 }
 body{
   font-family: $primary_font;
-  font-weight: $regular;
   margin: 0;
   height: 100%;
 
