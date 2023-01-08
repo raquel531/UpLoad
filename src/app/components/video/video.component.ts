@@ -13,6 +13,8 @@ export class VideoComponent {
   @Input() channel = '';
   @Input() title = '';
   @Input() time_ago = '';
+  @Input() id_video! : number
+  @Input() id_channel! : number
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
 }

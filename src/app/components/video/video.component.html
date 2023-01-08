@@ -1,8 +1,8 @@
-<div class="videobox">
+<div class="videobox" [routerLink]="['/video', id_video]">
   <div class="box1">
   <img class="thumbnail" alt="thumbnail" src="{{url + thumbnail}}">
     <div class="user_icons">
-    <img class="user_pic" alt="user_pic" src="{{url + user_pic}}">
+    <img class="user_pic" alt="user_pic" src="{{url + user_pic}}" [routerLink]="['/channel', id_channel]">
       <div class="icons"></div>
     </div>
 </div>

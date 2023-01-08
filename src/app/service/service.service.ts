@@ -41,24 +41,28 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/tags");
   }
 
+  getvideostag(id_tag : number) {
+    return this.http.get(BASE_URL + "/tag/videos/" + id_tag )
+  }
+
   getchannels() {
     return this.http.get(BASE_URL + "/channels");
+  }
+
+  getvideoschannel(id_channel : number) {
+    return this.http.get(BASE_URL + "/channel/videos/" + id_channel )
   }
 
   getplaylists() {
     return this.http.get(BASE_URL + "/playlists")
   }
 
+  getvideosplaylist(id_playlist : number) {
+    return this.http.get(BASE_URL + "/playlist/videos/" + id_playlist)
+  }
+
   getthematics() {
     return this.http.get(BASE_URL + "/thematics")
-  }
-
-  getvideostag(id_tag : number) {
-    return this.http.get(BASE_URL + "/tag/videos/" + id_tag )
-  }
-
-  getvideoschannel(id_channel : number) {
-    return this.http.get(BASE_URL + "/channel/videos/" + id_channel )
   }
 
 }

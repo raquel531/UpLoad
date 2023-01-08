@@ -1,11 +1,13 @@
 <div class="container">
 <div class="videos" >
-  <app-video *ngFor="let video of videos" [routerLink]="['/video', video.id_video]"
+  <app-video *ngFor="let video of videos"
   [thumbnail]="video.thumbnail"
   [user_pic]="video.picture "
   [channel]="video.field_channel_1"
   [title]="video.name"
-  [time_ago]="video.created">
+  [time_ago]="video.created"
+  [id_video]="video.id_video"
+  [id_channel]="video.id_channel">
   </app-video>
 </div>
   <div class="sidebar">

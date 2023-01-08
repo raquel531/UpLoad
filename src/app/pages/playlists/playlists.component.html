@@ -1,5 +1,5 @@
 <p style="font-size: 50px; text-align: center" >ALL THE PLAYLISTS</p>
 <div class="lecoisas" *ngFor="let playlist of playlists">
-  <h2 style="color: #1e76fe">{{playlist.Titulo}}</h2>
+  <h2 style="color: #1e76fe">{{playlist.title}}</h2>
   <iframe [src]="playlist.url | safe"></iframe>
 </div>
