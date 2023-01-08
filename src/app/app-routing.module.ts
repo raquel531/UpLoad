@@ -7,6 +7,7 @@ import {PlaylistsComponent} from "./pages/playlists/playlists.component";
 import {VideopageComponent} from "./pages/videopage/videopage.component";
 import {ChannelpageComponent} from "./pages/channelpage/channelpage.component";
 import {TagvideosComponent} from "./pages/tagvideos/tagvideos.component";
+import {ThematicpageComponent} from "./pages/thematicpage/thematicpage.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'playlists', component: PlaylistsComponent},
   {path: 'video/:id_video', component: VideopageComponent},
   {path: 'channel/:id_channel', component:ChannelpageComponent},
-  {path: 'tagvideos/:id_tag', component: TagvideosComponent}
+  {path: 'tagvideos/:id_tag', component: TagvideosComponent},
+  {path: 'thematics/:nid', component: ThematicpageComponent }
 ];
 
 @NgModule({
