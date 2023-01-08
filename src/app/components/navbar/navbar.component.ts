@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {faHome, faPlay, faFilm, faBarsStaggered} from "@fortawesome/free-solid-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {ServiceService} from "../../service/service.service";
@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
   faPlaylists = faPlay
 
   tags : any = []
+  @Input() id_tag! : number;
 
   isMoreTags = true
 

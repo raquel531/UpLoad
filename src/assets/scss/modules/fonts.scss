@@ -1,19 +1,4 @@
-
 @font-face {
-  font-family: 'nominee-regular';
-  src: url('/src/assets/fonts/Regular/Nominee-Medium.woff2') format('woff2'),
-  url('/src/assets/fonts/Regular/Nominee-Medium.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-
-}
-
-
-@font-face {
-  font-family: 'nominee-bold';
-  src: url('/src/assets/fonts/Bold/Nominee-Bold.woff2') format('woff2'),
-  url('/src/assets/fonts/Bold/Nominee-Bold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-
+  font-family: 'Poppins';
+  src: url('../../fonts/Poppins/Poppins-Regular.ttf');
 }
