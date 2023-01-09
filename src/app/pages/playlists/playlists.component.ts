@@ -9,6 +9,7 @@ import {ServiceService} from "../../service/service.service";
 export class PlaylistsComponent implements OnInit {
 
   playlists: any = []
+  url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
   constructor(private Service: ServiceService) { }
 

@@ -1,5 +1,18 @@
-<p style="font-size: 50px; text-align: center" >ALL THE PLAYLISTS</p>
-<div class="lecoisas" *ngFor="let playlist of playlists">
-  <h2 style="color: #1e76fe">{{playlist.title}}</h2>
-  <iframe [src]="playlist.url | safe"></iframe>
+<div class="container">
+  <div class="page_title">
+    <p>ALL THE Playlist</p>
+  </div>
+  <div class="channel_box" *ngFor="let playlist of playlists" >
+    <div class="header">
+      <img src="{{url + playlist.header}}" alt="header">
+      <div class="user_info">
+        <div class="channel_info">
+          <h5 >{{playlist.title}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="videos">
+      <app-video-playlist [id_playlist]="playlist.id_playlist"></app-video-playlist>
+    </div>
+  </div>
 </div>

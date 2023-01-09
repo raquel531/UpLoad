@@ -25,6 +25,7 @@ import {SafePipe} from "./service/service.service";
 import { TagComponent } from './components/tag/tag.component';
 import { VideoComponent } from './components/video/video.component';
 import { TagvideosComponent } from './pages/tagvideos/tagvideos.component';
+import { VideoPlaylistComponent } from './components/video-playlist/video-playlist.component';
 
 @NgModule({
     declarations: [
@@ -48,7 +49,8 @@ import { TagvideosComponent } from './pages/tagvideos/tagvideos.component';
         SafePipe,
         TagComponent,
         VideoComponent,
-        TagvideosComponent
+        TagvideosComponent,
+        VideoPlaylistComponent
     ],
   imports: [
     BrowserModule,
