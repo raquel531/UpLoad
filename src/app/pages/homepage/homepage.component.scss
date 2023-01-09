@@ -13,4 +13,25 @@ app-video {
 
 }
 
+.limitHeight {
+  height: 1177px;
+  overflow: hidden;
+}
 
+.show_more {
+  display: flex;
+  justify-content: center;
+  width: 126px;
+  padding: 10px;
+  margin-left: 45%;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  color: #b5b5be;
+  font-size: 10px;
+  background-color: #282830;
+  border-radius: 5px;
+
+  &.active, &:hover {
+    color: white;
+  }
+}

@@ -12,6 +12,12 @@ export class HomepageComponent implements OnInit {
   videos: any = []
   @Input() id_video!: number
 
+  isShowMore = true
+
+  showMore() {
+    this.isShowMore = !this.isShowMore
+  }
+
   constructor(private Service: ServiceService) {}
 
   ngOnInit(): void {

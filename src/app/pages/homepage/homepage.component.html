@@ -1,5 +1,6 @@
 <div class="container">
-<div class="videos" >
+  <div class="container2">
+<div class="videos" [ngClass]="{'limitHeight': isShowMore}">
   <app-video *ngFor="let video of videos"
   [thumbnail]="video.thumbnail"
   [user_pic]="video.picture "
@@ -9,6 +10,10 @@
   [id_video]="video.id_video"
   [id_channel]="video.id_channel">
   </app-video>
+</div>
+  <div class="show_more" >
+    <a (click)="showMore()">{{ isShowMore ? 'Show More': 'Show Less' }}</a>
+  </div>
 </div>
   <div class="sidebar">
   <app-rec-channels></app-rec-channels>

@@ -4,8 +4,13 @@
   margin: 0 50px;
 }
 
-.header > img {
-  width: 515px;
+.header_img {
+  height: 150px;
+  overflow: hidden;
+}
+
+.header_img > img {
+  width: 715px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -19,7 +24,7 @@
   width: 95px;
   border-radius: 50%;
   position: absolute;
-  margin-top: -65px;
+  margin-top: -63px;
   margin-left: 29px;
   border-style: solid;
   box-shadow: -3px -5px 10px 5px black;
@@ -30,5 +35,11 @@
 }
 
 .channel_info > h5 {
-  margin-top: 38px;
+  margin-top: 55px;
+  font-size: 20px;
+  color: #f9f7f7
+}
+
+app-video-channel {
+  display: flex;
 }
