@@ -29,6 +29,9 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
+  getchannelPage(id_channel: number) {
+    return this.http.get(BASE_URL + "/channels/" + id_channel);
+  }
   getvideoDetail(id_video: number) {
     return this.http.get(BASE_URL + "/videos/" + id_video);
   }

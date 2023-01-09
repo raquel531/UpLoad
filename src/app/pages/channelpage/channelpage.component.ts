@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceService} from "../../service/service.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-channelpage',
@@ -7,11 +8,19 @@ import {ServiceService} from "../../service/service.service";
   styleUrls: ['./channelpage.component.scss']
 })
 export class ChannelpageComponent implements OnInit {
+  channels: any = []
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
+  id_channel: any
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private Service: ServiceService) { }
 
   ngOnInit(): void {
+    this.id_channel = this.route.snapshot.params['id_channel']
+    this.Service.getchannelPage(this.id_channel).subscribe((channels) => {
+      this.channels = channels;
+      this.channels = this.channels[0]
 
-  }
+  })
 
+}
 }
