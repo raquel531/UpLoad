@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceService} from "../../service/service.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-playlists',
@@ -10,8 +11,9 @@ export class PlaylistsComponent implements OnInit {
 
   playlists: any = []
   url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
+  id_playlist!:number
 
-  constructor(private Service: ServiceService) { }
+  constructor(private route:ActivatedRoute,  private Service: ServiceService) { }
 
   ngOnInit(): void {
     this.Service.getplaylists().subscribe((playlists) => {

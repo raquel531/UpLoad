@@ -12,7 +12,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class DetailVideoComponent implements OnInit {
 
-  videos: any = []
+  videos: any = null
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
   faFlag = faFlag as IconProp

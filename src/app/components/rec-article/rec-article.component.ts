@@ -9,7 +9,7 @@ import {ServiceService} from "../../service/service.service";
 export class RecArticleComponent implements OnInit {
 
   channels: any = []
-  thematics: any = []
+  thematics: any = null
   @Input() id_channel!: number
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
