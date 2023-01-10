@@ -1,7 +1,19 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 50px;
+
+}
+
+.page_title > p {
+  margin-top: -15px;
+}
+
+.channel_box {
+  background-color: #282830;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 45px;
+  width: auto;
 }
 
 .header_img {
@@ -18,7 +30,7 @@
 .user_info {
   display: flex;
   align-items: center;
-  margin-top: -34px;
+  margin-top: 30px;
 }
 .user_pic > img {
   width: 95px;
@@ -35,11 +47,13 @@
 }
 
 .channel_info > h5 {
-  margin-top: 55px;
+  margin-top: 5px;
   font-size: 20px;
   color: #f9f7f7
 }
 
 app-video-channel {
   display: flex;
+  flex-wrap: wrap;
+
 }

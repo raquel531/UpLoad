@@ -10,6 +10,7 @@ export class VideoChannelComponent implements OnInit {
 
   @Input() id_channel!: number
   videoschannel : any = []
+  url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
 
   constructor(private Service: ServiceService) {
