@@ -10,7 +10,6 @@ app-video {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 950px;
-
 }
 
 .limitHeight {
@@ -34,4 +33,8 @@ app-video {
   &.active, &:hover {
     color: white;
   }
+}
+
+.sidebar {
+  margin-left: 50px;
 }
