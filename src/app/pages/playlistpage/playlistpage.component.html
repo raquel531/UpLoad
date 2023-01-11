@@ -1,1 +1,10 @@
-<p>playlistpage works!</p>
+<div class="oneisall">
+<div class="videoslist" >
+<div class="playlist" *ngFor="let vp of videosplaylist" >
+  <img src="{{url + vp.thumbnail}}" (click)="updateIdVideo(vp.id_video)">
+</div>
+</div>
+<div class="videoview">
+<app-detail-video [id_video]="id_video"></app-detail-video>
+</div>
+</div>

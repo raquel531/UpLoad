@@ -11,7 +11,7 @@ export class PlaylistsComponent implements OnInit {
 
   playlists: any = []
   url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
-  id_playlist!:number
+
 
   constructor(private route:ActivatedRoute,  private Service: ServiceService) { }
 

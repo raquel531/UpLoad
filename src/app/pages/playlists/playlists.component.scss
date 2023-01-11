@@ -1,11 +1,13 @@
 .container {
   display: flex;
   flex-direction: row;
-  margin: 0 50px;
+  flex-wrap: wrap;
 }
 
 .header > img {
-  width: 100%;
+  width:  475px;
+  height: 180px;
+  object-fit: cover;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   margin-bottom: -7px;
@@ -29,3 +31,4 @@
   flex-direction: column;
   justify-content: space-between;
 }
+

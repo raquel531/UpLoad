@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  BASE_URL: 'https://dev-project-upskill-grupo04.pantheonsite.io'
 };
 
 /*

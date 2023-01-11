@@ -1,0 +1,13 @@
+.videoslist {
+  display: flex;
+  flex-direction: column;
+}
+
+.videoview {
+  display: flex;
+}
+
+.oneisall {
+  display: flex;
+  flex-direction: row-reverse;
+}

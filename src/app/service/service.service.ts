@@ -1,7 +1,8 @@
 import {Injectable, Pipe, PipeTransform} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-import { DomSanitizer } from "@angular/platform-browser";
+import {DomSanitizer} from "@angular/platform-browser";
+import {environment} from "../../environments/environment";
 
 @Pipe({
 
@@ -11,7 +12,8 @@ import { DomSanitizer } from "@angular/platform-browser";
 
 export class SafePipe implements PipeTransform {
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) {
+  }
 
   transform(url: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -19,15 +21,15 @@ export class SafePipe implements PipeTransform {
 
 }
 
-const BASE_URL = 'https://dev-project-upskill-grupo04.pantheonsite.io/api'
+const BASE_URL = environment.BASE_URL + "/api";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ServiceService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getchannelPage(id_channel: number) {
     return this.http.get(BASE_URL + "/channels/" + id_channel);
@@ -44,23 +46,23 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/tags");
   }
 
-  getvideostag(id_tag : number) {
-    return this.http.get(BASE_URL + "/tag/videos/" + id_tag )
+  getvideostag(id_tag: number) {
+    return this.http.get(BASE_URL + "/tag/videos/" + id_tag)
   }
 
   getchannels() {
     return this.http.get(BASE_URL + "/channels");
   }
 
-  getvideoschannel(id_channel : number) {
-    return this.http.get(BASE_URL + "/channel/videos/" + id_channel )
+  getvideoschannel(id_channel: number) {
+    return this.http.get(BASE_URL + "/channel/videos/" + id_channel)
   }
 
   getplaylists() {
     return this.http.get(BASE_URL + "/playlists")
   }
 
-  getvideosplaylist(id_playlist : number) {
+  getvideosplaylist(id_playlist: number) {
     return this.http.get(BASE_URL + "/playlist/videos/" + id_playlist)
   }
 

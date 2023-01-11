@@ -2,7 +2,7 @@
   <p>ALL THE Playlist</p>
 </div>
 <div class="container">
-  <div class="channel_box" *ngFor="let playlist of playlists" [routerLink]="['/playlist', id_playlist]">
+  <div class="channel_box" *ngFor="let playlist of playlists" [routerLink]="['/playlist', playlist.id_playlist]">
       <div class="channel_info">
         <h5 >{{playlist.title}}</h5>
       </div>
