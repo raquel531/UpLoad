@@ -4,3 +4,44 @@ img {
   border: none;
   margin: 10px;
 }
+
+.video_box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6%;
+  background-color: #1c1c24;
+  height: 302px;
+  width: 260px;
+  justify-content: space-between;
+  margin-right: 21px;
+  margin-bottom: 20px;
+  }
+
+.thumbnail {
+  width: 260px;
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+  margin-left: 0px;
+  margin-top: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.tags {
+  font-size: 10px;
+  color: blue;
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 14px;
+  color: white;
+  margin-left: 10px;
+}
+
+.timeago {
+  font-size: 10px;
+  color: grey;
+  margin-top: 8px;
+  margin-left: 10px;
+}

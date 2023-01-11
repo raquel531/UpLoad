@@ -1,43 +1,62 @@
-<div class=“box”>
-  <div class=“header”>
-    <img class=“header_img” [src]="url + channels.field_header">
+<div class="box">
+  <div class="header">
+    <img class="header_img" [src]="url + channels.field_header">
+    <div class="name_box">
+      <h4 class="name">  {{channels.user}} </h4>
+    </div>
   </div>
-  <div class=“name”>
-    {{channels.user}}
-  </div>
-  <div class=“description”>
+  <div class="box2">
+  <div class="description">
     {{channels.description}}
   </div>
-  <div class=“userPic”>
-    <img class=“user_pic” [src]="url + channels.picture">
-
-
+  <div class="userPic">
+    <img class="user_pic" [src]="url + channels.picture">
   </div>
+  </div>
+  <br>
+  <hr>
+  <div class="videoBox">
+    <p class="videos_title">Videos</p>
+    <div class="videos">
+    <app-video-channel [id_channel]="id_channel"></app-video-channel>
 
-  <div class=“videoBox”>
-    <div class=“videos”>
-    <app-video [id_channel]="id_channel"></app-video>
     </div>
   </div>
 
-  <div class=“comments”>
+  <div class="comments_box">
     <h3>Comments</h3>
-    <div class=“userPic2”>
+    <div class="userPic2">
 
     </div>
-    <div class=“comment_info”>
-      submit name submit email submit message
+    <div class="comment_info">
+      <img class="user" src="assets/user.png" alt="user">
+      <form class="info">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message"><br>
+
+      </form>
     </div>
-    <div class=“submit_button”>
-      <p>Submit comment</p></div>
-    <div class=“userPic3”>
+    <div class="submit">
+      <input type="submit" class="button" value="Submit Comment">
+    </div>
+<div class="comments" *ngFor="let c of comments">
+  <img class="user1" src="assets/user.png" alt="user">
+  {{c.field_your_name}}
+  {{c.created}}
+  {{c.text}}
+    <div class="userPic3">
 
 
     </div>
-    <div class=“userPic4”>
-
+    <div class="userPic4">
 
     </div>
-
+</div>
+  </div>
+</div>
 
 

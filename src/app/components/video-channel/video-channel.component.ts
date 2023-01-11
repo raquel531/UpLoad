@@ -13,6 +13,7 @@ export class VideoChannelComponent implements OnInit {
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
 
+
   constructor(private Service: ServiceService) {
   }
 

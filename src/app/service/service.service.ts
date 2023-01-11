@@ -68,4 +68,8 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/thematics")
   }
 
+  getChannelComments (id_channel : number) {
+    return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
+  }
+
 }
