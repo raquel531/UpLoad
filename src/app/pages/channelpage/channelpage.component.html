@@ -31,7 +31,7 @@
     <div class="comment_info">
       <img class="user" src="assets/user.png" alt="user">
       <form class="info">
-<!--        <label class="label_name" for="name">Name</label>-->
+
         <input placeholder="Name" type="text" id="name" name="name">
 
         <input placeholder="Email" type="text" id="email" name="email"><br>
@@ -46,8 +46,10 @@
 <div class="comments" *ngFor="let c of comments">
   <img class="user1" src="assets/user.png" alt="user">
   <div class="examples">
-    <div class="comment_name">{{c.field_your_name}}</div>
+    <div class="examples1">
+      <div class="comment_name">{{c.field_your_name}}</div>
     <div class="timeago">{{c.created}}</div>
+    </div>
     <div class="comment_text"> {{c.text}}</div>
   </div>
     <div class="userPic3">
