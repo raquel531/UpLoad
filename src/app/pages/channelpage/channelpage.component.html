@@ -24,19 +24,19 @@
   </div>
 
   <div class="comments_box">
-    <h3>Comments</h3>
+    <h4>Comments</h4>
     <div class="userPic2">
 
     </div>
     <div class="comment_info">
       <img class="user" src="assets/user.png" alt="user">
       <form class="info">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br>
-        <label for="message">Message:</label>
-        <input type="text" id="message" name="message"><br>
+<!--        <label class="label_name" for="name">Name</label>-->
+        <input placeholder="Name" type="text" id="name" name="name">
+
+        <input placeholder="Email" type="text" id="email" name="email"><br>
+
+        <input placeholder="Message" type="text" id="message" name="message"><br>
 
       </form>
     </div>
@@ -45,9 +45,11 @@
     </div>
 <div class="comments" *ngFor="let c of comments">
   <img class="user1" src="assets/user.png" alt="user">
-  {{c.field_your_name}}
-  {{c.created}}
-  {{c.text}}
+  <div class="examples">
+    <div class="comment_name">{{c.field_your_name}}</div>
+    <div class="timeago">{{c.created}}</div>
+    <div class="comment_text"> {{c.text}}</div>
+  </div>
     <div class="userPic3">
 
 
