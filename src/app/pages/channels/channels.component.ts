@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
 
 @Component({
@@ -10,7 +10,7 @@ export class ChannelsComponent implements OnInit {
 
   channels : any = []
   url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
-
+  @Input() id_channel!: number
   constructor(private Service: ServiceService) {}
 
 
