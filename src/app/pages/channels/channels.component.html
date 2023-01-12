@@ -5,7 +5,7 @@
   <p>CHANNELS</p>
   </div>
   <hr>
-  <div class="channel_box" *ngFor="let channel of channels" >
+  <div class="channel_box" *ngFor="let channel of channels" [routerLink]="['/channel', channel.id_channel]" >
     <div class="header">
     <!--  <div class="header_img">
       <img src="{{url + channel.field_header}}" alt="header">
