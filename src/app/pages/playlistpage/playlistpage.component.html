@@ -4,7 +4,7 @@
   <img src="{{url + vp.thumbnail}}" (click)="updateIdVideo(vp.id_video)">
 </div>
 </div>
-<div class="videoview">
+<div class="videoview" *ngIf="id_video">
 <app-detail-video [id_video]="id_video"></app-detail-video>
 </div>
 </div>

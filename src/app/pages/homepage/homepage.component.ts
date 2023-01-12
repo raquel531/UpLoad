@@ -12,10 +12,12 @@ export class HomepageComponent implements OnInit {
   videos: any = []
   @Input() id_video!: number
 
+  page = 1;
+
   isShowMore = true
 
   showMore() {
-    this.isShowMore = !this.isShowMore
+    this.page++;
   }
 
   constructor(private Service: ServiceService) {}

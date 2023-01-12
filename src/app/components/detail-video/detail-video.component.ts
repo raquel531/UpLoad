@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit,OnChanges,} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
 import {faThumbsUp, faThumbsDown} from "@fortawesome/free-regular-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
@@ -11,7 +11,7 @@ import {environment} from "../../../environments/environment";
   templateUrl: './detail-video.component.html',
   styleUrls: ['./detail-video.component.scss']
 })
-export class DetailVideoComponent implements OnInit {
+export class DetailVideoComponent implements OnInit, OnChanges {
   url = environment.BASE_URL;
   faFlag = faFlag as IconProp
   faThumbsUp = faThumbsUp as IconProp
@@ -32,6 +32,15 @@ export class DetailVideoComponent implements OnInit {
       return this.videos.url = this.videos.url.replace("watch?v=", "embed/")
     })
 
+  }
+
+  ngOnChanges(changes: any) {
+    console.log(changes);
+    this.Service.getvideoDetail(changes.id_video.currentValue).subscribe((videos : any) => {
+      console.log("videos", videos)
+      this.videos = videos[0];
+      return this.videos.url = this.videos.url.replace("watch?v=", "embed/")
+    })
   }
 
 }

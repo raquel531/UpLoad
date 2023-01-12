@@ -19,7 +19,8 @@ export class PlaylistpageComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       let id_playlist = params['id_playlist'];
-      this.Service.getvideosplaylist(id_playlist).subscribe((vp) => {
+      this.Service.getvideosplaylist(id_playlist).subscribe((vp:any ) => {
+        this.id_video = vp[0].id_video;
         this.videosplaylist = vp;
       })
     })
@@ -28,7 +29,7 @@ export class PlaylistpageComponent implements OnInit {
   updateIdVideo(id_video: number) {
     this.id_video = id_video;
     console.log(id_video)
-    return this.id_video = this.route.snapshot.params['id_video'];
+    //return this.id_video = this.route.snapshot.params['id_video'];
   }
 
 }
