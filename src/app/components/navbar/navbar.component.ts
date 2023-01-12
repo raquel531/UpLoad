@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
   @Input() id_tag! : number;
 
   isMoreTags = true
+  en = true
 
   moreTags() {
     this.isMoreTags = !this.isMoreTags

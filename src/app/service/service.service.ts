@@ -12,6 +12,8 @@ import {environment} from "../../environments/environment";
 
 export class SafePipe implements PipeTransform {
 
+
+
   constructor(private sanitizer: DomSanitizer) {
   }
 
@@ -22,6 +24,8 @@ export class SafePipe implements PipeTransform {
 }
 
 const BASE_URL = environment.BASE_URL + "/api";
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -74,4 +78,7 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
+  translate() {
+
+  }
 }
