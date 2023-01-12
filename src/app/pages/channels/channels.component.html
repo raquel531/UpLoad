@@ -1,7 +1,10 @@
+
 <div class="container">
+  <div class="container2">
   <div class="page_title">
-  <p>ALL THE CHANNELS</p>
+  <p>CHANNELS</p>
   </div>
+  <hr>
   <div class="channel_box" *ngFor="let channel of channels" >
     <div class="header">
     <!--  <div class="header_img">
@@ -19,6 +22,13 @@
     <div class="videos">
        <app-video-channel [id_channel]="channel.id_channel" ></app-video-channel>
     </div>
-
   </div>
-</div>
+  </div>
+    <div class="sidebar">
+      <app-rec-article></app-rec-article>
+    </div>
+  </div>
+
+
+
+
