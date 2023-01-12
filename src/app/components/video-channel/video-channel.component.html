@@ -1,5 +1,5 @@
 <div class="video_box" *ngFor="let video of videoschannel; let index = index " [routerLink]="['/video', video.id_video]">
-  <div class="ctree" *ngIf="index<3">
+  <div class="ctree" *ngIf="!limit || index<limit">
     <div class="video">
   <img class="thumbnail" [src]="url + video.thumbnail" alt="video" >
       <div class="tags">{{video.field_tags}}</div>

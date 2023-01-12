@@ -9,6 +9,8 @@ import {ServiceService} from "../../service/service.service";
 export class VideoChannelComponent implements OnInit {
 
   @Input() id_channel!: number
+  @Input() limit? : number
+
   videoschannel : any = []
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
