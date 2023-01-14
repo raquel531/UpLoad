@@ -4,6 +4,8 @@ import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {ServiceService} from "../../service/service.service";
 
 
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -16,8 +18,8 @@ export class NavbarComponent implements OnInit {
   faThemedArticles = faFilm
   faPlaylists = faPlay
 
-  tags : any = []
-  @Input() id_tag! : number;
+  tags: any = []
+  @Input() id_tag!: number;
 
   isMoreTags = true
   en = true
@@ -26,7 +28,8 @@ export class NavbarComponent implements OnInit {
     this.isMoreTags = !this.isMoreTags
   }
 
-  constructor(private Service: ServiceService) { }
+  constructor(private Service: ServiceService) {
+  }
 
   ngOnInit(): void {
     this.Service.gettags().subscribe((tags) => {
@@ -34,4 +37,9 @@ export class NavbarComponent implements OnInit {
     })
   }
 
+  multilingualclick(en: boolean) {
+    this.Service.multilingual(en)
+    console.log(en)
+    return this.en = !this.en
+  }
 }

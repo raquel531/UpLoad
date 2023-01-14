@@ -28,8 +28,6 @@ export class PlaylistpageComponent implements OnInit {
 
   updateIdVideo(id_video: number) {
     this.id_video = id_video;
-    console.log(id_video)
-    //return this.id_video = this.route.snapshot.params['id_video'];
   }
 
 }

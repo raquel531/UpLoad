@@ -1,3 +1,6 @@
+// @ts-ignore
+// @ts-ignore
+
 import {Injectable, Pipe, PipeTransform} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
@@ -23,8 +26,7 @@ export class SafePipe implements PipeTransform {
 
 }
 
-const BASE_URL = environment.BASE_URL + "/api";
-
+let BASE_URL = environment.BASE_URL + "/en/api";
 
 
 @Injectable({
@@ -78,7 +80,16 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
-  translate() {
+  en: boolean | undefined
 
+  multilingual(en: boolean) {
+    this.en = en;
+    console.log(en)
+    if (en) {
+      return BASE_URL
+    }
+    console.log(BASE_URL)
+     return BASE_URL = environment.BASE_URL + "/pt-pt/api";
   }
+
 }
