@@ -22,7 +22,8 @@ export class NavbarComponent implements OnInit {
   @Input() id_tag!: number;
 
   isMoreTags = true
-  en = true
+  en = false
+
 
   moreTags() {
     this.isMoreTags = !this.isMoreTags
@@ -37,9 +38,8 @@ export class NavbarComponent implements OnInit {
     })
   }
 
-  multilingualclick(en: boolean) {
-    this.Service.multilingual(en)
-    console.log(en)
-    return this.en = !this.en
+  multilingualclick() {
+    this.Service.multilingual(this.en)
+    return  this.en = !this.en
   }
 }
