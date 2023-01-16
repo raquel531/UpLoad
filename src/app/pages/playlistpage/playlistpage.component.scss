@@ -1,6 +1,11 @@
 .videoslist {
   display: flex;
   flex-direction: column;
+  height: 700px;
+  width: 400px;
+  overflow: scroll;
+  scrollbar-base-color: #2b2b34;
+  border: 2px solid #3a3c3d;
 }
 
 .videoview {
@@ -10,4 +15,23 @@
 .oneisall {
   display: flex;
   flex-direction: row-reverse;
+}
+
+img{
+  width: 95%;
+  padding: 5px;
+}
+
+.vpnumber{
+  display: flex;
+  font-size: 1.40em;
+  color: #94949f;
+  margin-left: 8px;
+}
+
+.playlist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
