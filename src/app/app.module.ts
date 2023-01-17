@@ -26,6 +26,7 @@ import { TagComponent } from './components/tag/tag.component';
 import { VideoComponent } from './components/video/video.component';
 import { TagvideosComponent } from './pages/tagvideos/tagvideos.component';
 import { VideoPlaylistComponent } from './components/video-playlist/video-playlist.component';
+import { MyPlaylistComponent } from './components/my-playlist/my-playlist.component';
 
 @NgModule({
     declarations: [
@@ -50,7 +51,8 @@ import { VideoPlaylistComponent } from './components/video-playlist/video-playli
         TagComponent,
         VideoComponent,
         TagvideosComponent,
-        VideoPlaylistComponent
+        VideoPlaylistComponent,
+        MyPlaylistComponent
     ],
   imports: [
     BrowserModule,

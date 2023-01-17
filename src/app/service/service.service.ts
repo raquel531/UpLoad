@@ -24,9 +24,12 @@ export class SafePipe implements PipeTransform {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
+
 }
 
 let BASE_URL = environment.BASE_URL + "/en/api";
+
+
 
 
 @Injectable({
@@ -92,4 +95,23 @@ export class ServiceService {
      return BASE_URL = environment.BASE_URL + "/pt-pt/api";
   }
 
+  favoritos: number[] = JSON.parse(localStorage.getItem("favoritos") || "[]");
+
+  toggleFavorito(id_video: number) {
+  if (this.favoritos.includes(id_video)) {
+    let indice = this.favoritos.indexOf(id_video)
+    this.favoritos.splice(indice, 1)
+  } else {
+    this.favoritos.push(id_video)
+  }
+  localStorage.setItem("favoritos", JSON.stringify(this.favoritos))
+}
+
+getFavoritos() {
+  return this.http.get(BASE_URL + "/videos?ids=" + this.favoritos.join(','));
+}
+
+isFavorito(id_video: number): boolean {
+  return this.favoritos.includes(id_video)
+}
 }
