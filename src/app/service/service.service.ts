@@ -83,15 +83,12 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
-  en: boolean | undefined
 
   multilingual(en: boolean) {
-    this.en = en;
-    console.log(en)
+    console.log(BASE_URL, 'function')
     if (en) {
-      return BASE_URL
+      return BASE_URL = environment.BASE_URL + "/en/api";
     }
-    console.log(BASE_URL)
      return BASE_URL = environment.BASE_URL + "/pt-pt/api";
   }
 

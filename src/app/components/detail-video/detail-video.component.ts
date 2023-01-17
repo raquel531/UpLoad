@@ -35,9 +35,7 @@ export class DetailVideoComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: any) {
-    console.log(changes);
     this.Service.getvideoDetail(changes.id_video.currentValue).subscribe((videos : any) => {
-      console.log("videos", videos)
       this.videos = videos[0];
       return this.videos.url = this.videos.url.replace("watch?v=", "embed/")
     })
