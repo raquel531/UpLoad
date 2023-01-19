@@ -40,6 +40,8 @@ export class ServiceService {
   constructor(private http: HttpClient) {
   }
 
+  favoritos: number[] = JSON.parse(localStorage.getItem("favoritos") || "[]");
+
   getchannelPage(id_channel: number) {
     return this.http.get(BASE_URL + "/channels/" + id_channel);
   }
@@ -85,14 +87,13 @@ export class ServiceService {
 
 
   multilingual(en: boolean) {
-    console.log(BASE_URL, 'function')
+    console.log(BASE_URL)
     if (en) {
       return BASE_URL = environment.BASE_URL + "/en/api";
     }
      return BASE_URL = environment.BASE_URL + "/pt-pt/api";
   }
 
-  favoritos: number[] = JSON.parse(localStorage.getItem("favoritos") || "[]");
 
   toggleFavorito(id_video: number) {
   if (this.favoritos.includes(id_video)) {
@@ -105,7 +106,7 @@ export class ServiceService {
 }
 
 getFavoritos() {
-  return this.http.get(BASE_URL + "/videos?ids=" + this.favoritos.join(','));
+  return this.http.get(BASE_URL + "/videos/" + this.favoritos.join(','));
 }
 
 isFavorito(id_video: number): boolean {
