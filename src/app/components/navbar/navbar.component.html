@@ -5,10 +5,10 @@
   <div class="box1">
   <ul>
     <a class="menu" routerLink="home" routerLinkActive="active">
-    <li><fa-icon [icon]="faHome"></fa-icon>Home</li>
+    <li><fa-icon [icon]="faHome"></fa-icon>{{navLang === "en" ? "Home" : "Início"}}</li>
     </a>
     <a class="menu" routerLink="channels" routerLinkActive="active">
-    <li><fa-icon [icon]="faChannels"></fa-icon>Channels</li>
+    <li><fa-icon [icon]="faChannels"></fa-icon>{{navLang === "en" ? "Channels" : "Canais"}}</li>
     </a>
     <a class="menu" routerLink="thematics" routerLinkActive="active">
     <li><fa-icon [icon]="faThemedArticles"></fa-icon>Themed Articles</li>
