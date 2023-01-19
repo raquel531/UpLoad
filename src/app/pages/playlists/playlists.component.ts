@@ -16,9 +16,11 @@ export class PlaylistsComponent implements OnInit {
   constructor(private route:ActivatedRoute,  private Service: ServiceService) { }
 
   ngOnInit(): void {
-    this.Service.getplaylists().subscribe((playlists) => {
-      this.playlists = <any[]>playlists;
-    })
+    this.Service.subscribeLanguage(() => {
+      this.Service.getplaylists().subscribe((playlists) => {
+        this.playlists = <any[]>playlists;
+      })
+    });
   }
 
 }

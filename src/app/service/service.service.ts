@@ -16,7 +16,6 @@ import {environment} from "../../environments/environment";
 export class SafePipe implements PipeTransform {
 
 
-
   constructor(private sanitizer: DomSanitizer) {
   }
 
@@ -30,13 +29,13 @@ export class SafePipe implements PipeTransform {
 let BASE_URL = environment.BASE_URL + "/en/api";
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class ServiceService {
+  private languageQueue: Function[] = [];
+
   constructor(private http: HttpClient) {
   }
 
@@ -45,6 +44,7 @@ export class ServiceService {
   getchannelPage(id_channel: number) {
     return this.http.get(BASE_URL + "/channels/" + id_channel);
   }
+
   getvideoDetail(id_video: number) {
     return this.http.get(BASE_URL + "/videos/" + id_video);
   }
@@ -81,35 +81,63 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/thematics")
   }
 
-  getChannelComments (id_channel : number) {
+  getChannelComments(id_channel: number) {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
-
-  multilingual(en: boolean) {
-    console.log(BASE_URL)
-    if (en) {
-      return BASE_URL = environment.BASE_URL + "/en/api";
-    }
-     return BASE_URL = environment.BASE_URL + "/pt-pt/api";
+  postChannelComment(id_channel: number, name: string, email: string, comment: string) {
+    let postBody = {
+      "entity_id": [{"target_id": id_channel}], // id do conteúdo para onde vai o comentário
+      "entity_type": [{"value": "node"}], // tipo de entidade (node ou media)
+      "comment_type": [{"target_id": "comment"}], // nome máquina do tipo de comentário
+      "field_name": [{"value": "field_channel_comments"}], // nome máquina do campo de comentário no tipo de conteúdo
+      "field_comment_name": [{"value": name}],
+      "field_email": [{"value": email}],
+      "subject": [{"value": ""}],
+      "comment_body": [{"value": comment, "format": "plain_text"}]
+    };
+    this.http.post(BASE_URL + "/comments/channels", postBody).subscribe(()=>{
+      console.log("comentario postado")
+    })
   }
 
+  lang = "en";
+  languages = ["en", "pt-pt"]
+
+  toggleLanguage() {
+    if (this.languages.indexOf(this.lang) == 0) {
+      this.lang = this.languages[1];
+    } else {
+      this.lang = this.languages[0];
+    }
+    BASE_URL = environment.BASE_URL + "/" + this.lang + "/api";
+    this.languageQueue.forEach((queue: Function) => {
+      queue(this.lang);
+    })
+
+    return this.lang;
+  }
+
+  subscribeLanguage(queue: Function) {
+    this.languageQueue.push(queue);
+    queue(this.lang);
+  }
 
   toggleFavorito(id_video: number) {
-  if (this.favoritos.includes(id_video)) {
-    let indice = this.favoritos.indexOf(id_video)
-    this.favoritos.splice(indice, 1)
-  } else {
-    this.favoritos.push(id_video)
+    if (this.favoritos.includes(id_video)) {
+      let indice = this.favoritos.indexOf(id_video)
+      this.favoritos.splice(indice, 1)
+    } else {
+      this.favoritos.push(id_video)
+    }
+    localStorage.setItem("favoritos", JSON.stringify(this.favoritos))
   }
-  localStorage.setItem("favoritos", JSON.stringify(this.favoritos))
-}
 
-getFavoritos() {
-  return this.http.get(BASE_URL + "/videos/" + this.favoritos.join(','));
-}
+  getFavoritos() {
+    return this.http.get(BASE_URL + "/videos/" + this.favoritos.join(','));
+  }
 
-isFavorito(id_video: number): boolean {
-  return this.favoritos.includes(id_video)
-}
+  isFavorito(id_video: number): boolean {
+    return this.favoritos.includes(id_video)
+  }
 }
