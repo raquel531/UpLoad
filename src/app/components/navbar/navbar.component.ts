@@ -33,9 +33,12 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.Service.gettags().subscribe((tags) => {
-      this.tags = <any[]>tags;
-    })
+
+    this.Service.subscribeLanguage(() => {
+      this.Service.gettags().subscribe((tags) => {
+        this.tags = tags;
+      })
+    });
   }
 
   multilingualclick() {

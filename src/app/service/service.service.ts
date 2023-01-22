@@ -28,12 +28,15 @@ export class SafePipe implements PipeTransform {
 
 let BASE_URL = environment.BASE_URL + "/en/api";
 
+let Comments_URL = environment.BASE_URL;
+
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ServiceService {
+
   private languageQueue: Function[] = [];
 
   constructor(private http: HttpClient) {
@@ -90,13 +93,12 @@ export class ServiceService {
       "entity_id": [{"target_id": id_channel}], // id do conteúdo para onde vai o comentário
       "entity_type": [{"value": "node"}], // tipo de entidade (node ou media)
       "comment_type": [{"target_id": "comment"}], // nome máquina do tipo de comentário
-      "field_name": [{"value": "field_channel_comments"}], // nome máquina do campo de comentário no tipo de conteúdo
-      "field_comment_name": [{"value": name}],
+      "field_name": [{"value": "field_comments"}], // nome máquina do campo de comentário no tipo de conteúdo
+      "field_your_name": [{"value": name}],
       "field_email": [{"value": email}],
-      "subject": [{"value": ""}],
       "comment_body": [{"value": comment, "format": "plain_text"}]
     };
-    this.http.post(BASE_URL + "/comments/channels", postBody).subscribe(()=>{
+    this.http.post(Comments_URL + "/comment", postBody).subscribe(()=>{
       console.log("comentario postado")
     })
   }

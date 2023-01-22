@@ -18,7 +18,7 @@ export class PlaylistsComponent implements OnInit {
   ngOnInit(): void {
     this.Service.subscribeLanguage(() => {
       this.Service.getplaylists().subscribe((playlists) => {
-        this.playlists = <any[]>playlists;
+        this.playlists = playlists;
       })
     });
   }

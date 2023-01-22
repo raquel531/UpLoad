@@ -15,10 +15,11 @@ export class ChannelsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.Service.getchannels().subscribe((channels) => {
-      this.channels = <any[]>channels;
-    })
-
+    this.Service.subscribeLanguage(() => {
+      this.Service.getchannels().subscribe((channels) => {
+        this.channels = <any[]>channels;
+      })
+    });
   }
 
 }

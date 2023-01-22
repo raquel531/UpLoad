@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -27,6 +26,7 @@ import { VideoComponent } from './components/video/video.component';
 import { TagvideosComponent } from './pages/tagvideos/tagvideos.component';
 import { VideoPlaylistComponent } from './components/video-playlist/video-playlist.component';
 import { MyPlaylistComponent } from './components/my-playlist/my-playlist.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -54,12 +54,13 @@ import { MyPlaylistComponent } from './components/my-playlist/my-playlist.compon
         VideoPlaylistComponent,
         MyPlaylistComponent
     ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FontAwesomeModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FontAwesomeModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

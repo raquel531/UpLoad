@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
 
 
@@ -20,12 +20,15 @@ export class HomepageComponent implements OnInit {
     this.page++;
   }
 
-  constructor(private Service: ServiceService) {}
+  constructor(private Service: ServiceService) {
+  }
 
   ngOnInit(): void {
-    this.Service.getvideos().subscribe((videos) => {
-      this.videos = <any[]>videos;
-    })
+    this.Service.subscribeLanguage(() => {
+      this.Service.getvideos().subscribe((videos) => {
+        this.videos = videos;
+      })
+    });
   }
 
 }
