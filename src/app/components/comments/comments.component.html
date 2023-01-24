@@ -5,13 +5,13 @@
   </div>
   <div class="comment_info">
     <img class="user" src="assets/user.png" alt="user">
-    <form class="info" #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm.value)" >
+    <form class="info" #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm)" >
 
-      <input type="text" ngModel id="name" name="name" placeholder="Name">
+      <input type="text" ngModel  name="name" id="name" placeholder="Name">
 
-      <input type="text" ngModel id="email" name="email" Placeholder="Email">
+      <input type="text" ngModel name="email" id="email" Placeholder="Email">
       <br>
-      <input type="text" ngModel id="message" name="comment" placeholder="Message">
+      <input type="text" ngModel  name="comment" id="message" placeholder="Message">
       <br>
       <div class="submit">
       <button class="button" type="submit">Submit Comment</button>
