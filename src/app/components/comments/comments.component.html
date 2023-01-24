@@ -1,9 +1,34 @@
-<form #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm)" >
-  <input type="text" name="name" ngModel placeholder="Name">
-  <br><br>
-  <input type="text" name="email" ngModel Placeholder="Email">
-  <br><br>
-  <input type="text"  name="comment" ngModel placeholder="Message">
-  <br><br>
-  <button type="submit">Submit Comment</button>
-</form>
+<div class="comments_box">
+  <h4>Comments</h4>
+  <div class="userPic2">
+
+  </div>
+  <div class="comment_info">
+    <img class="user" src="assets/user.png" alt="user">
+    <form class="info" #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm.value)" >
+
+      <input type="text" ngModel id="name" name="name" placeholder="Name">
+
+      <input type="text" ngModel id="email" name="email" Placeholder="Email">
+      <br>
+      <input type="text" ngModel id="message" name="comment" placeholder="Message">
+      <br>
+      <div class="submit">
+      <button class="button" type="submit">Submit Comment</button>
+      </div>
+    </form>
+  <div class="comments" *ngFor="let c of commentInfo">
+    <img class="user1" src="assets/user.png" alt="user">
+    <div class="examples">
+      <div class="examples1">
+        <div class="comment_name">{{c.field_your_name}}</div>
+        <div class="timeago">{{c.created}}</div>
+      </div>
+      <div class="comment_text"> {{c.text}}</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+

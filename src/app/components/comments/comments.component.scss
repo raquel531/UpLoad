@@ -1,0 +1,97 @@
+.user{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 272px;
+
+}
+.user1{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 272px;
+
+}
+.info {
+  margin-left: 80px;
+}
+#name {
+  margin-left: 10px;
+  border-bottom-color: #e3e2e2;
+  outline: 0;
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  width: 250px;
+}
+
+#email {
+  margin-left: 10px;
+  border-bottom-color: #e3e2e2;
+  outline: 0;
+  background-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  width: 440px;
+}
+
+#message {
+  margin-left: 10px;
+  border-bottom-color: #e3e2e2;
+  outline: 0;
+  background-color: transparent;
+  width: 700px;
+}
+
+.submit {
+  margin-top: 44px;
+  margin-left: 500px;
+}
+
+.examples {
+  margin-left: 80px;
+  margin-top: 26px;
+}
+.examples1{
+  display:flex;
+  flex-direction: row;
+}
+.comment_name{
+  color: white;
+  font-size: 14px;
+}
+.timeago{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  margin-left: 11px;
+  font-size: 12px;
+  color: grey;
+}
+
+.comment_text {
+  color: white;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+
+
+.button{
+  background-color: transparent;
+  border: 1px solid;
+  height: 28px;
+  width: 160px;
+  color: #CCC;
+  border-radius: 18px;
+  margin-left: 134px;
+}
+
+input {
+  color: white;
+  height: 40px;
+}
