@@ -2,6 +2,11 @@
   border: 1px solid #292932;
   padding: 3px;
   width: 100%;
-  border-radius: 3px
+  border-radius: 3px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
 

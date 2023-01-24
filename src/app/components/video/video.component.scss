@@ -6,6 +6,11 @@
   height: 374px;
   justify-content: space-between;
 
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+
 }
 .videobox, .box1, .box2 {
   max-width: 350px;
@@ -14,6 +19,7 @@
   width: 350px;
   border-top-left-radius: 6%;
   border-top-right-radius: 6%;
+
 
 }
 .user_icons {
@@ -27,6 +33,7 @@
   border-radius: 50%;
   position: absolute;
   border-style: solid;
+  border-color: white;
   bottom: 42px;
   left: 257px;
 

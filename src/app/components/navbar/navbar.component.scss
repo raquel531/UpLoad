@@ -64,6 +64,7 @@ app-tag {
   color: #f9f9fa;
   font-weight: normal;
   border-radius: 13%;
+  
 }
 
 .limitHeight {
@@ -85,5 +86,18 @@ app-tag {
 
   &.active, &:hover {
     color: white;
+    cursor: pointer;
+  }
+}
+
+.translate {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  font-size: small;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
   }
 }
