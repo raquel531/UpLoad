@@ -1,9 +1,9 @@
-<form #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm.value)" >
-  <input type="text" ngModel name="name" placeholder="Name">
+<form #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm)" >
+  <input type="text" name="name" ngModel placeholder="Name">
   <br><br>
-  <input type="text" ngModel name="email" Placeholder="Email">
+  <input type="text" name="email" ngModel Placeholder="Email">
   <br><br>
-  <input type="text" ngModel name="comment" placeholder="Message">
+  <input type="text"  name="comment" ngModel placeholder="Message">
   <br><br>
   <button type="submit">Submit Comment</button>
 </form>

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-comments',
@@ -24,9 +25,9 @@ export class CommentsComponent implements OnInit {
     })
   }
 
-  postComents(value: any) {
-    // @ts-ignore
-    this.Service.postChannelComment(this.id_channel, value)
+  postComents(commentsForm: NgForm) {
+    console.log(commentsForm.value)
+    this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
   }
 
 }

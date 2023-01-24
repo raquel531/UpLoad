@@ -44,9 +44,6 @@ export class ServiceService {
 
   favoritos: number[] = JSON.parse(localStorage.getItem("favoritos") || "[]");
 
-  getchannelPage(id_channel: number) {
-    return this.http.get(BASE_URL + "/channels/" + id_channel);
-  }
 
   getvideoDetail(id_video: number) {
     return this.http.get(BASE_URL + "/videos/" + id_video);
@@ -62,6 +59,10 @@ export class ServiceService {
 
   getvideostag(id_tag: number) {
     return this.http.get(BASE_URL + "/tag/videos/" + id_tag)
+  }
+
+  getchannelPage(id_channel: number) {
+    return this.http.get(BASE_URL + "/channels/" + id_channel);
   }
 
   getchannels() {
@@ -88,7 +89,7 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
-  postChannelComment(id_channel: number, name: string, email: string, comment: string) {
+  postChannelComment(id_channel: number, name: string | number | null, email: string, comment: string) {
     let postBody = {
       "entity_id": [{"target_id": id_channel}], // id do conteúdo para onde vai o comentário
       "entity_type": [{"value": "node"}], // tipo de entidade (node ou media)
