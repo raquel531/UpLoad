@@ -2,9 +2,11 @@
   <div class="ctree" *ngIf="!limit || index<limit">
     <div class="video">
   <img class="thumbnail" [src]="url + video.thumbnail" alt="video" >
+      <div class="info">
       <div class="tags">{{video.field_tags}}</div>
       <div class="title">{{video.name}}</div>
       <div class="timeago">{{video.created}}</div>
+      </div>
     </div>
   </div>
 </div>

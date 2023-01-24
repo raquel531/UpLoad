@@ -10,13 +10,15 @@ img {
   flex-direction: column;
   border-radius: 6%;
   background-color: #1c1c24;
-  height: 362px;
+  height: auto;
   width: 260px;
-  justify-content: space-between;
   margin-right: 21px;
   margin-bottom: 20px;
+  padding-bottom: 15px;
   }
-
+.video_box {
+  padding-left: 20px;
+}
 .thumbnail {
   width: 260px;
   border-top-left-radius: 6%;
@@ -27,6 +29,9 @@ img {
   border-bottom-right-radius: 0px;
 }
 
+.info {
+
+}
 .tags {
   font-size: 10px;
   color: #1e74fb;

@@ -1,6 +1,6 @@
 <div class="box">
   <div class="header">
-    <img class="header_img" [src]="url + channels.field_header">
+    <img alt="header" class="header_img" [src]="url + channels.field_header">
     <div class="name_box">
       <h4 class="name">  {{channels.user}} </h4>
     </div>
@@ -10,7 +10,7 @@
     {{channels.description}}
   </div>
   <div class="userPic">
-    <img class="user_pic" [src]="url + channels.picture">
+    <img alt="pic" class="user_pic" [src]="url + channels.picture">
   </div>
   </div>
   <br>
@@ -22,45 +22,6 @@
 
     </div>
   </div>
-
- <!-- <div class="comments_box">
-    <h4>Comments</h4>
-    <div class="userPic2">
-
-    </div>
-    <div class="comment_info">
-      <img class="user" src="assets/user.png" alt="user">
-      <form class="info">
-
-        <input placeholder="Name" type="text" id="name" name="name">
-
-        <input placeholder="Email" type="text" id="email" name="email"><br>
-
-        <input placeholder="Message" type="text" id="message" name="message"><br>
-
-      </form>
-    </div>
-    <div class="submit">
-      <input type="submit" class="button" value="Submit Comment">
-    </div>
-<div class="comments" *ngFor="let c of comments">
-  <img class="user1" src="assets/user.png" alt="user">
-  <div class="examples">
-    <div class="examples1">
-      <div class="comment_name">{{c.field_your_name}}</div>
-    <div class="timeago">{{c.created}}</div>
-    </div>
-    <div class="comment_text"> {{c.text}}</div>
-  </div>
-    <div class="userPic3">
-
-
-    </div>
-    <div class="userPic4">
-
-    </div>
-</div>
-  </div>-->
 
   <app-comments [id_channel]="id_channel"></app-comments>
 
