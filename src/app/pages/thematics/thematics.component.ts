@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-thematics',
@@ -8,14 +9,17 @@ import {ServiceService} from "../../service/service.service";
 })
 export class ThematicsComponent implements OnInit {
 
-  thematics : any = []
-  baseURLMEDIA= "https://dev-project-upskill-grupo04.pantheonsite.io/"
+  thematics: any = []
+  url = "https://dev-project-upskill-grupo04.pantheonsite.io/"
 
-  constructor(private Service: ServiceService) { }
+  constructor(private route: ActivatedRoute , private Service: ServiceService) {
+  }
 
   ngOnInit(): void {
-    this.Service.getthematics().subscribe((thematics) => {
-      this.thematics = <any[]>thematics;
+    this.Service.subscribeLanguage(() => {
+      this.Service.getthematics().subscribe((thematics) => {
+        this.thematics = thematics;
+      })
     })
   }
 

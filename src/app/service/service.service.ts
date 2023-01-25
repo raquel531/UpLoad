@@ -85,6 +85,14 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/thematics")
   }
 
+  getthematicspage (id_thematic : number) {
+    return this.http.get(BASE_URL + "/thematics/" + id_thematic )
+  }
+
+  getvideosthematics(id_tag: string ) {
+    return this.http.get(BASE_URL + "/thematics/videos/" + id_tag)
+  }
+
   getChannelComments(id_channel: number) {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
@@ -99,9 +107,7 @@ export class ServiceService {
       "field_email": [{"value": email}],
       "comment_body": [{"value": comment, "format": "plain_text"}]
     };
-    this.http.post(Comments_URL + "/comment", postBody).subscribe(()=>{
-      console.log("comentario postado")
-    })
+    this.http.post(Comments_URL + "/comment", postBody).subscribe(()=>{})
   }
 
   lang = "en";

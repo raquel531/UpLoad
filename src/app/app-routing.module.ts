@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'video/:id_video', component: VideopageComponent},
   {path: 'channel/:id_channel', component:ChannelpageComponent},
   {path: 'tagvideos/:id_tag', component: TagvideosComponent},
-  {path: 'thematic/:nid', component: ThematicpageComponent },
+  {path: 'thematic/:id_thematic', component: ThematicpageComponent },
   {path: 'playlist/:id_playlist', component: PlaylistpageComponent},
   {path: 'playlist/12', component: MyPlaylistComponent}
 ];

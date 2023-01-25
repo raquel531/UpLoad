@@ -1,6 +1,14 @@
-<p style="font-size: 50px; text-align: center" >ALL THE THEMATICS</p>
-<div class="lecoisas" *ngFor="let theme of thematics">
-  <h5 style="color: #1e76fe">{{theme.title}}</h5>
-  <img [src]="baseURLMEDIA + theme.field_header">
-  <h5>fazer 3 img preview de videos do canal thumbails </h5>
+<div class="page_title">
+  <p>THEMATICS</p>
+  <hr>
+</div>
+<div class="container">
+  <div class="channel_box" *ngFor="let theme of thematics" [routerLink]="['/thematic', theme.id_thematic]">
+    <div class="channel_info">
+      <h5 >{{theme.title}}</h5>
+    </div>
+    <div class="header">
+      <img src="{{url + theme.header}}" alt="header">
+    </div>
+  </div>
 </div>

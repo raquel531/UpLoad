@@ -7,12 +7,14 @@
       <a>See All</a>
     </div>
   </div>
-  <div class="info">
-    <img src="{{url + thematics[0].field_thumbnail}}" alt="pic" >
-    <div class="text">
-    <h4 class="article_name" [routerLink]="['/thematics', thematics[0].nid]">{{thematics[0].title}}</h4>
-    <h5 class="user_name" >{{thematics[0].uid}} </h5>
+  <div class="thematic"  [routerLink]="['/thematic', thematics[0].id_thematic]">
+    <div class="info">
+      <img src="{{url + thematics[0].thumbnail}}" alt="pic">
+      <div class="text">
+        <h4 class="article_name">{{thematics[0].title}}</h4>
+        <h5 class="user_name">{{thematics[0].uid}} </h5>
+      </div>
     </div>
+    <img class="thematic_pic" alt="pic" src="{{url + thematics[0].picture}}">
   </div>
-  <img class="thematic_pic" alt="pic" src="{{url + thematics[0].field_pic}}" [routerLink]="['/thematics', thematics[0].nid]">
 </div>
