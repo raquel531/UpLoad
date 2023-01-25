@@ -25,8 +25,4 @@ export class VideoChannelComponent implements OnInit {
     })
   }
 
-  embed(video: string) {
-    return video.replace("watch?v=", "embed/")
-  }
-
 }

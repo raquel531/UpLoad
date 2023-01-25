@@ -3,8 +3,8 @@
   <hr>
 </div>
 <div class="container">
-  <div class="channel_box" *ngFor="let theme of thematics" [routerLink]="['/thematic', theme.id_thematic]">
-    <div class="channel_info">
+  <div class="thematic_box" *ngFor="let theme of thematics" [routerLink]="['/thematic', theme.id_thematic]">
+    <div class="thematic_info">
       <h5 >{{theme.title}}</h5>
     </div>
     <div class="header">
