@@ -52,3 +52,14 @@ hr {
   border: 0 none;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 480px) {
+    .box {
+      margin-top: -600px;
+      margin-left: -293px;
+    }
+  .channel_box {
+    width: 674px;
+  }
+  }
+

@@ -11,9 +11,13 @@ $black:900;
 
 * {
   box-sizing: border-box;
+
 }
 body{
   font-family: $primary_font;
   margin: 0;
-  height: 100%;
+  width: fit-content;
+  background-color: #13131a;
+
 }
+

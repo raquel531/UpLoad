@@ -1,8 +1,6 @@
 <div class="comments_box">
   <h4>Comments</h4>
-  <div class="userPic2">
-
-  </div>
+ <div class="form">
   <div class="comment_info">
     <img class="user" src="assets/user.png" alt="user">
     <form class="info" #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm)" >
@@ -18,6 +16,7 @@
       <button class="button" type="submit">Submit Comment</button>
       </div>
     </form>
+  </div>
   <div class="comments" *ngFor="let c of commentInfo">
     <img class="user1" src="assets/user.png" alt="user">
     <div class="examples">

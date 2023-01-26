@@ -38,3 +38,11 @@ app-video {
 .sidebar {
   margin-left: 50px;
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    scale: 156%;
+    margin-top: -900px;
+    margin-left: -179px;
+  }
+}

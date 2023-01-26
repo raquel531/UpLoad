@@ -3,8 +3,12 @@
   height: 60px;
   border-radius: 50%;
   position: absolute;
-  left: 272px;
-
+}
+.comment_info{
+  width: 100%;
+}
+.form {
+  display: flex;
 }
 .user1{
   width: 60px;
@@ -42,7 +46,7 @@
 
 .submit {
   margin-top: 44px;
-  margin-left: 500px;
+
 }
 
 .examples {

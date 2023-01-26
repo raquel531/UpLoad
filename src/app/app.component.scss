@@ -1,6 +1,6 @@
 .container{
   display: flex;
-  min-height: 1024px;
+
   color: lightgray;
   background-color: #13131a;
 }
@@ -9,6 +9,19 @@
 .router{
   background-color: #13131a;
   padding: 50px;
+  height: fit-content;
 
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+  }
+  .router {
+    scale: 40%;
+
+  }
+  }
 

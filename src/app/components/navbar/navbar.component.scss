@@ -114,8 +114,13 @@ app-tag {
 }
   .logo {
     position: absolute;
+    border: none;
+    scale: 70%;
   }
   .container {
     height: 65.5px;
+    border: none;
+    width: 480px;
   }
+
 }

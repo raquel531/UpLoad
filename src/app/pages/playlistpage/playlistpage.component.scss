@@ -5,11 +5,6 @@
   overflow-y: auto;
   float: right;
   display: block;
- /* list-style-type: decimal; */
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding-inline-start: 40px;
   scrollbar-arrow-color: grey;
 }
@@ -17,14 +12,6 @@
   background-color: #2f2f2f;
   border-radius: 10px;
 }
-/* display: flex;
-  flex-direction: column;
-  height: 700px;
-  width: 400px;
-  overflow: scroll;
-  scrollbar-base-color: #2b2b34;
-  border: 2px solid #3a3c3d; */
-
 
 .videoview {
   display: flex;
@@ -41,23 +28,8 @@ img{
   border-radius: 25px;
 }
 
-/*.vpnumber{
-  display: flex;
-  font-size: 1.40em;
-  color: #94949f;
-  margin-left: 8px;
-} */
-
 .playlist{
-  /* display: flex;
-
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center; */
- /* display: list-item;
-  text-align: -webkit-match-parent; */
   display: flex;
-
 }
 
 ::-webkit-scrollbar {
@@ -77,4 +49,20 @@ h5{
 
 ::marker{
   color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+  .oneisall{
+    scale: 78%;
+    margin-top: -413px;
+    flex-direction: column-reverse;
+    margin-left: -184px;
+  }
+  .videoslist {
+    overflow: hidden;
+    overflow-y: auto;
+    margin-left: -365px;
+    width: 585px;
+    height: 660px;
+  }
 }

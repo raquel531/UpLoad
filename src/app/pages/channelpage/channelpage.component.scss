@@ -19,7 +19,7 @@ h4 {
 .name {
   color: white;
   margin-top: -79px;
-  margin-left: 30px;
+  margin-left: 9px;
 }
 .name_box{
   margin-top: -8px;
@@ -30,7 +30,7 @@ h4 {
 
 .box2{
       margin-top: 18px;
-      margin-left: 30px;
+      margin-left: 9px;
 }
 
 .user_pic {
@@ -71,3 +71,20 @@ hr {
   border: 0 none;
 }
 
+@media screen and (max-width: 480px) {
+  .box {
+    scale: 129%;
+    margin-top: -460px;
+    margin-left: -267px
+  }
+  .header {
+    width: 553px;
+    border-top-right-radius: 20px;
+  }
+  .header_img, .box2 {
+    width: 568px;
+  }
+  .description{
+    width: 550px;
+  }
+}

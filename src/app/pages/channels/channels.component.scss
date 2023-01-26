@@ -89,3 +89,14 @@ hr {
   padding-left: 50px;
   padding-top: 32px;
 }
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: -3434px;
+    margin-left: -342px;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
