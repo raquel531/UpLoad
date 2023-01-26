@@ -13,6 +13,8 @@ export class ThematicpageComponent implements OnInit {
   thematics: any = []
   id_thematic!: number
   id_tag = ''
+  links : any = []
+  linksname : string = ''
   url = 'https://dev-project-upskill-grupo04.pantheonsite.io'
 
   constructor(private route: ActivatedRoute, private Service: ServiceService) {
@@ -25,6 +27,8 @@ export class ThematicpageComponent implements OnInit {
         this.thematics = t;
         this.thematics = this.thematics[0]
         this.id_tag = this.thematics.id_tag
+        this.links = this.thematics.links.split(',')
+        this.linksname = this.thematics.link_name.split(',')
         this.Service.getvideosthematics(this.id_tag).subscribe((vt) => {
           this.videosthematics = vt
         })

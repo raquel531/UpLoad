@@ -10,22 +10,25 @@
       {{thematics.description}}
     </div>
     <div class="links">
-      <a href="{{thematics.links}}">{{thematics.link_name}}</a>
+      <p>Referencial Links:</p>
+      <div class="link" *ngFor="let link of links, let i = index">
+        <a [href]="link | safe">{{linksname[i]}}</a>
+      </div>
     </div>
-  </div>
-  <br>
-  <hr>
-  <div class="videoBox">
-    <p class="videos_title">Videos</p>
-    <div class="videos">
-      <app-video *ngFor="let vt of videosthematics"
-                 [thumbnail]="vt.thumbnail"
-                 [user_pic]="vt.picture"
-                 [title]="vt.name"
-                 [id_video]="vt.id_video"
-                 [id_channel]="vt.id_channel">
+    <br>
+    <hr>
+    <div class="videoBox">
+      <p class="videos_title">Videos</p>
+      <div class="videos">
+        <app-video *ngFor="let vt of videosthematics"
+                   [thumbnail]="vt.thumbnail"
+                   [user_pic]="vt.picture"
+                   [title]="vt.name"
+                   [id_video]="vt.id_video"
+                   [id_channel]="vt.id_channel">
 
-      </app-video>
+        </app-video>
+      </div>
     </div>
   </div>
 </div>
