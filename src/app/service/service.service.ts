@@ -114,6 +114,19 @@ export class ServiceService {
     this.http.post(Comments_URL + "/comment", postBody).subscribe(()=>{})
   }
 
+  postVideoComment(id_video: number, name: string | number | null, email: string, comment: string) {
+    let postBody = {
+      "entity_id": [{"target_id": id_video}], // id do conteúdo para onde vai o comentário
+      "entity_type": [{"value": "media"}],
+      "comment_type": [{"target_id": "video_comment"}],
+      "field_name": [{"value": "field_videos_comments"}],
+      "field_your_name": [{"value": name}],
+      "field_email": [{"value": email}],
+      "comment_body": [{"value": comment, "format": "plain_text"}]
+    };
+    this.http.post(Comments_URL + "/comment", postBody).subscribe(()=>{})
+  }
+
   lang = "en";
   languages = ["en", "pt-pt"]
 

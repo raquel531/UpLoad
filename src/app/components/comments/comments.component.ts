@@ -34,7 +34,11 @@ export class CommentsComponent implements OnInit {
 
   postComents(commentsForm: NgForm) {
     console.log(commentsForm.value)
-    this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+    if(this.id_video) {
+    this.Service.postVideoComment(this.id_video, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+  }else {
+      this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+    }
   }
 
 }
