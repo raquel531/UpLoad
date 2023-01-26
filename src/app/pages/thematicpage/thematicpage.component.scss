@@ -1,5 +1,6 @@
 .header_img {
-  width: 817px;
+  width: 100%;
+  object-fit: fill;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   height: 280px;
@@ -18,19 +19,20 @@ h4 {
 }
 .name {
   color: white;
-  margin-top: -79px;
+  margin-top: -85px;
   margin-left: 30px;
+  font-size: 1.5em;
 }
 .name_box{
   margin-top: -8px;
   position: absolute;
-  box-shadow: 62px -2px 31px 129px #13131a;
+  //box-shadow: 62px -2px 31px 129px #13131a;
   width: 100%;
 }
 
 .box2{
-  margin-top: 18px;
-  margin-left: 30px;
+  margin-top: 35px;
+  margin-left: 5px;
 }
 
 .user_pic {
@@ -44,7 +46,7 @@ h4 {
 }
 
 .description{
-  font-size: 10px;
+  font-size: 0.75em;
   color: white;
   margin-top: -19px;
   max-width: 715px;
@@ -68,4 +70,13 @@ hr {
 .videos {
   display: flex;
   flex-wrap: wrap;
+}
+
+app-video {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.box {
+  width: 100%;
 }

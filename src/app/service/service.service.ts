@@ -1,9 +1,7 @@
 // @ts-ignore
 // @ts-ignore
-
 import {Injectable, Pipe, PipeTransform} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-
 import {DomSanitizer} from "@angular/platform-browser";
 import {environment} from "../../environments/environment";
 
