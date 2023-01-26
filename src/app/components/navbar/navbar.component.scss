@@ -33,6 +33,10 @@ img {
 
 }
 
+.menu_button {
+  display: none;
+}
+
 fa-icon {
   font-size: 15px;
   margin-right: 14px;
@@ -110,17 +114,51 @@ app-tag {
 
 @media screen and (max-width: 480px) {
 .container2 {
-  display: none;
+display: none;
+
+.menu{
+  &.active, &:hover {
+    color: white;
+    border-left: solid white;
+    cursor: pointer
+
+  }
+}
 }
   .logo {
     position: absolute;
     border: none;
     scale: 70%;
+    margin-left: 30px;
   }
   .container {
     height: 65.5px;
     border: none;
     width: 480px;
+  }
+
+  .menu_button {
+    display: flex;
+  }
+  .openMenu {
+    display: flex;
+    flex-direction: column;
+    color: #b5b5be;
+    width: 222px;
+    background-color: #1c1c24;
+    border-right: 2px solid #2b2b34;
+    margin-top: -2px;
+    z-index: 1;
+    padding-bottom: 18px;
+    border-bottom-right-radius: 10px;
+
+
+  }
+
+
+  .menu1 {
+    font-size: 31px;
+    margin: 10px 10px 10px 22px
   }
 
 }
