@@ -97,6 +97,10 @@ export class ServiceService {
     return this.http.get(BASE_URL + "/comments/channels/" + id_channel);
   }
 
+  getVideoComments(id_video: number) {
+    return this.http.get(BASE_URL + "/comments/videos/" + id_video);
+  }
+
   postChannelComment(id_channel: number, name: string | number | null, email: string, comment: string) {
     let postBody = {
       "entity_id": [{"target_id": id_channel}], // id do conteúdo para onde vai o comentário

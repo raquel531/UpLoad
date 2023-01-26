@@ -12,6 +12,7 @@ import {NgForm} from "@angular/forms";
 export class CommentsComponent implements OnInit {
 
   @ Input() id_channel!: number
+  @ Input() id_video?: number
   commentInfo: any = []
 
   constructor(private Service: ServiceService) {
@@ -19,11 +20,17 @@ export class CommentsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.Service.getChannelComments(this.id_channel).subscribe((data) => {
+    if (this.id_video) {
+    this.Service.getVideoComments(this.id_video).subscribe((data) => {
       console.log("data", data)
       this.commentInfo = data
+
+    })} else {
+      this.Service.getChannelComments(this.id_channel).subscribe((data) => {
+        console.log("data", data)
+        this.commentInfo = data
     })
-  }
+  }}
 
   postComents(commentsForm: NgForm) {
     console.log(commentsForm.value)
