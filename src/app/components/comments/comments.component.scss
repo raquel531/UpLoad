@@ -17,34 +17,27 @@
 .info {
   margin-left: 80px;
 }
+
+.user_info {
+  display: flex;
+}
 #name {
   margin-left: 10px;
-  border-bottom-color: #e3e2e2;
   outline: 0;
-  background-color: transparent;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
   width: 250px;
 }
 
 #email {
   margin-left: 10px;
-  border-bottom-color: #e3e2e2;
   outline: 0;
-  background-color: transparent;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
   width: 440px;
 }
 
 #message {
   margin-left: 10px;
-  border-bottom-color: #e3e2e2;
   outline: 0;
   background-color: transparent;
-  width: 700px;
+  width: 100%;
 }
 
 .submit {
@@ -92,6 +85,16 @@
 }
 
 input {
-  color: white;
   height: 40px;
+  background-color: transparent;
+  border-color: transparent transparent gray transparent;
+
+}
+
+input:-webkit-autofill {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  -webkit-box-shadow: 0 0 0 1000px #121218 inset;
+  -webkit-text-fill-color: #b5b5be;
 }

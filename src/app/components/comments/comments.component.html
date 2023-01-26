@@ -6,12 +6,13 @@
   <div class="comment_info">
     <img class="user" src="assets/user.png" alt="user">
     <form class="info" #commentsForm="ngForm" (ngSubmit)="postComents(commentsForm)" >
-
+      <div class="user_info">
       <input type="text" ngModel  name="name" id="name" placeholder="Name">
-
       <input type="text" ngModel name="email" id="email" Placeholder="Email">
-      <br>
+      </div>
+      <div class="textfield">
       <input type="text" ngModel  name="comment" id="message" placeholder="Message">
+      </div>
       <br>
       <div class="submit">
       <button class="button" type="submit">Submit Comment</button>
