@@ -6,10 +6,18 @@
     <img class="user_pic" alt="user_pic" src="{{url + user_pic}}" [routerLink]="['/channel', id_channel]">
       </div>
       <div class="icons">
-        <div class="fav" (click)="toggleFavorito">
+        <div class="share" (click)="showOptions()">
           <fa-icon [icon]="faShare"></fa-icon>
+        </div>
+        <div class="fav" (click)="toggleFavorito">
           <fa-icon [icon]="isFavorito ? faBookmarkSolid : faBookmark"></fa-icon>
         </div>
+      </div>
+      <div class="share_options" [ngClass]="{'show_options': isShowOptions}">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+        <fa-icon [icon]="faTwitch"></fa-icon>
+        <fa-icon [icon]="faTwitter"></fa-icon>
+        <fa-icon [icon]="faWhatsapp"></fa-icon>
       </div>
     </div>
 

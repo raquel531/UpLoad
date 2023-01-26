@@ -3,6 +3,7 @@ import {faBookmark} from "@fortawesome/free-regular-svg-icons";
 import {faShareNodes} from "@fortawesome/free-solid-svg-icons";
 import {faBookmark as faBookmarkSolid} from "@fortawesome/free-solid-svg-icons";
 import {ServiceService} from "../../service/service.service";
+import {faWhatsapp, faInstagram, faTwitter, faTwitch} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'app-video',
@@ -15,6 +16,11 @@ export class VideoComponent {
   faBookmark = faBookmark
   faBookmarkSolid = faBookmarkSolid
 
+  faWhatsapp = faWhatsapp
+  faInstagram = faInstagram
+  faTwitter = faTwitter
+  faTwitch = faTwitch
+
   @Input() thumbnail = '';
   @Input() user_pic = '';
   @Input() channel = '';
@@ -23,6 +29,12 @@ export class VideoComponent {
   @Input() id_video! : number
   @Input() id_channel! : number
   url= 'https://dev-project-upskill-grupo04.pantheonsite.io'
+
+  isShowOptions = true
+
+  showOptions() {
+    this.isShowOptions = !this.isShowOptions
+  }
 
   constructor(private Service: ServiceService) {
   }
