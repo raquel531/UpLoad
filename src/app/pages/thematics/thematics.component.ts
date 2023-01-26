@@ -10,6 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 export class ThematicsComponent implements OnInit {
 
   thematics: any = []
+  themelang = "en"
   url = "https://dev-project-upskill-grupo04.pantheonsite.io/"
 
   constructor(private route: ActivatedRoute , private Service: ServiceService) {

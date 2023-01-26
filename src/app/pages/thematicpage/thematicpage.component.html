@@ -9,8 +9,8 @@
     <div class="description">
       {{thematics.description}}
     </div>
-    <div class="userPic">
-      <img alt="pic" class="user_pic" [src]="url + thematics.picture">
+    <div class="links">
+      <a href="{{thematics.links}}">{{thematics.link_name}}</a>
     </div>
   </div>
   <br>
@@ -18,8 +18,14 @@
   <div class="videoBox">
     <p class="videos_title">Videos</p>
     <div class="videos">
+      <app-video *ngFor="let vt of videosthematics"
+                 [thumbnail]="vt.thumbnail"
+                 [user_pic]="vt.picture"
+                 [title]="vt.name"
+                 [id_video]="vt.id_video"
+                 [id_channel]="vt.id_channel">
+
+      </app-video>
     </div>
   </div>
 </div>
-
-<h6 *ngFor="let vt of videosthematics">{{vt.name}}</h6>
