@@ -74,17 +74,20 @@ hr {
 @media screen and (max-width: 480px) {
   .box {
     scale: 129%;
-    margin-top: -460px;
+    margin-top: -577px;
     margin-left: -267px
   }
   .header {
-    width: 553px;
+    width: 855px;
     border-top-right-radius: 20px;
   }
   .header_img, .box2 {
-    width: 568px;
+    width: 850px;
   }
   .description{
     width: 550px;
+  }
+  .user_pic {
+    left:666px
   }
 }

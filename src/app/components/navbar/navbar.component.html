@@ -1,8 +1,11 @@
 <div class="container">
+<div class="menu_button" (click)="showMenu()" >
+  <fa-icon class="menu1" [icon]="faBars"></fa-icon>
+</div>
 <div class="logo">
   <img src="assets/logo/uploadlogo.png" alt="uplog">
 </div>
-<div class="container2">
+<div class="container2" [ngClass]="{'openMenu': menuClicked}">
   <div class="box1">
   <ul>
     <a class="menu" routerLink="home" routerLinkActive="active">

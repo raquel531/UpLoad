@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {faHome, faPlay, faFilm, faBarsStaggered} from "@fortawesome/free-solid-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import {ServiceService} from "../../service/service.service";
-
-
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 
 @Component({
@@ -13,6 +12,7 @@ import {ServiceService} from "../../service/service.service";
 })
 export class NavbarComponent implements OnInit {
 
+  faBars = faBars
   faHome = faHome as IconProp
   faChannels = faBarsStaggered as IconProp
   faThemedArticles = faFilm
@@ -24,6 +24,12 @@ export class NavbarComponent implements OnInit {
   isMoreTags = true
 
   navLang = "en";
+
+  menuClicked = false
+
+  showMenu() {
+    this.menuClicked = !this.menuClicked
+}
 
   moreTags() {
     this.isMoreTags = !this.isMoreTags

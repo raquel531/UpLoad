@@ -9,13 +9,21 @@
 }
 .form {
   display: flex;
+  flex-direction: column;
+}
+.comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
 }
 .user1{
   width: 60px;
   height: 60px;
   border-radius: 50%;
   position: absolute;
-  left: 272px;
+
 
 }
 .info {
@@ -101,4 +109,10 @@ input:-webkit-autofill {
   border-left: none;
   -webkit-box-shadow: 0 0 0 1000px #121218 inset;
   -webkit-text-fill-color: #b5b5be;
+}
+
+@media screen and (max-width: 480px) {
+  .user1 {
+
+  }
 }
