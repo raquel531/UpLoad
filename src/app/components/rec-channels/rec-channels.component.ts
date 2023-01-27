@@ -21,8 +21,10 @@ export class RecChannelsComponent implements OnInit {
   constructor(private Service: ServiceService) {}
 
   ngOnInit(): void {
-    this.Service.getchannels().subscribe((channels) => {
-      this.channels = <any[]>channels;
+    this.Service.subscribeLanguage(() => {
+      this.Service.getchannels().subscribe((channels) => {
+        this.channels = <any[]>channels;
+      })
     })
   }
 

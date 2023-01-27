@@ -16,8 +16,10 @@ export class RecArticleComponent implements OnInit {
   constructor(private Service: ServiceService) { }
 
   ngOnInit(): void {
-    this.Service.getthematics().subscribe((thematics) => {
-      this.thematics = <any[]>thematics;
+    this.Service.subscribeLanguage(() => {
+      this.Service.getthematics().subscribe((thematics) => {
+        this.thematics = <any[]>thematics;
+      })
     })
 
   }
