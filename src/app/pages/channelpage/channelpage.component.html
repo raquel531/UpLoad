@@ -6,23 +6,21 @@
     </div>
   </div>
   <div class="box2">
-  <div class="description">
-    {{channels.description}}
-  </div>
-  <div class="userPic">
-    <img alt="pic" class="user_pic" [src]="url + channels.picture">
-  </div>
+    <div class="description">
+      {{channels.description}}
+    </div>
+    <div class="userPic">
+      <img alt="pic" class="user_pic" [src]="url + channels.picture">
+    </div>
   </div>
   <br>
   <hr>
   <div class="videoBox">
     <p class="videos_title">Videos</p>
     <div class="videos">
-    <app-video-channel [id_channel]="id_channel"></app-video-channel>
+      <app-video-channel [id_channel]="id_channel"></app-video-channel>
 
     </div>
   </div>
-
   <app-comments [id_channel]="id_channel"></app-comments>
-
 </div>

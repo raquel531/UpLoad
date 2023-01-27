@@ -21,24 +21,27 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.id_video) {
-    this.Service.getVideoComments(this.id_video).subscribe((data) => {
-      console.log("data", data)
-      this.commentInfo = data
-
-    })} else {
-      this.Service.getChannelComments(this.id_channel).subscribe((data) => {
-        console.log("data", data)
+      this.Service.getVideoComments(this.id_video).subscribe((data) => {
+        console.log("datavideo", data)
         this.commentInfo = data
-    })
-  }}
-
-  postComents(commentsForm: NgForm) {
-    console.log(commentsForm.value)
-    if(this.id_video) {
-    this.Service.postVideoComment(this.id_video, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
-  }else {
-      this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+      })
+    } else {
+      this.Service.getChannelComments(this.id_channel).subscribe((data) => {
+        console.log("datachannal", data)
+        this.commentInfo = data
+      })
     }
   }
+
+  postComents(commentsForm: NgForm) {
+    if (this.id_video) {
+      this.Service.postVideoComment(this.id_video, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+      commentsForm.reset()
+    } else {
+      this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
+      commentsForm.reset()
+    }
+  }
+
 
 }
