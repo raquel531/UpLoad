@@ -41,7 +41,7 @@ export class CommentsComponent implements OnInit {
     } else {
       this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment);
       commentsForm.reset();
-    }this.ngOnInit()
+    }
   }
 
 }
