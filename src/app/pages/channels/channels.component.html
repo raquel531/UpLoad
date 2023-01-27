@@ -1,33 +1,29 @@
-
 <div class="container">
   <div class="container2">
-  <div class="page_title">
-  <p>CHANNELS</p>
-  </div>
-  <hr>
-  <div class="channel_box" *ngFor="let channel of channels" [routerLink]="['/channel', channel.id_channel]" >
-    <div class="header">
-    <!--  <div class="header_img">
-      <img src="{{url + channel.field_header}}" alt="header">
-      </div>-->
-      <div class="user_info">
-    <div class="user_pic">
-      <img src="{{url + channel.picture}}" alt="laFoto">
+    <div class="page_title">
+      <p>CHANNELS</p>
     </div>
-    <div class="channel_info">
-      <h5 >{{channel.title}}</h5>
-    </div>
+    <hr>
+    <div class="channel_box" *ngFor="let channel of channels" [routerLink]="['/channel', channel.id_channel]">
+      <div class="header">
+        <div class="user_info">
+          <div class="user_pic">
+            <img src="{{url + channel.picture}}" alt="laFoto">
+          </div>
+          <div class="channel_info">
+            <h5>{{channel.title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <app-video-channel [id_channel]="channel.id_channel" [limit]="2"></app-video-channel>
       </div>
     </div>
-    <div class="videos">
-       <app-video-channel [id_channel]="channel.id_channel" [limit]="2" ></app-video-channel>
-    </div>
   </div>
+  <div class="sidebar">
+    <app-rec-article></app-rec-article>
   </div>
-    <div class="sidebar">
-      <app-rec-article></app-rec-article>
-    </div>
-  </div>
+</div>
 
 
 

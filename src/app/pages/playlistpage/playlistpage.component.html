@@ -1,9 +1,9 @@
 <div class="oneisall">
   <div class="videoslist">
-    <div class="playlist" *ngFor="let vp of videosplaylist, let i = index ">
-      <img src="{{url + vp.thumbnail}}" (click)="updateIdVideo(vp.id_video)">
+    <div class="playlist" *ngFor="let vp of videosplaylist, let i = index " (click)="updateIdVideo(vp.id_video)">
+      <img src="{{url + vp.thumbnail}}" alt="thumbnail">
       <div class="title">
-        <h5>{{vp.title}}</h5>
+        <h5>{{vp.name}}</h5>
       </div>
     </div>
   </div>

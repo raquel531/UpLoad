@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ServiceService} from "../../service/service.service";
 import {NgForm} from "@angular/forms";
 
+
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
@@ -38,10 +39,9 @@ export class CommentsComponent implements OnInit {
       this.Service.postVideoComment(this.id_video, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
       commentsForm.reset()
     } else {
-      this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment)
-      commentsForm.reset()
-    }
+      this.Service.postChannelComment(this.id_channel, commentsForm.value.name, commentsForm.value.email, commentsForm.value.comment);
+      commentsForm.reset();
+    }this.ngOnInit()
   }
-
 
 }
